@@ -1,13 +1,31 @@
 body {
-    width: 100%;
-    height: 100%;
+    display: grid;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 .backgroundVid {
     position: fixed;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.rubrik {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    font-size: 2.8rem;
+    color: green;
+}
+
+.textStartsida {
+    font-size: 2rem;
+}
+
+.name {
+    font-size: 1.5rem;
 }
 
 button {

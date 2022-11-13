@@ -10,14 +10,28 @@
 </head>
 <body>
 
-    <h1>Välkommen till Planeten!</h1>
-        
+    <div class="container">
+        <div class="rubrik">
+            <h1>Välkommen till Planeten!</h1><br>
+            <p class="textStartsida">Här får du lära dig mer om vår fantastiska planet och några spännande djur.<br>
+            Fyll i ditt namn och klicka på knappen så kör vi igång!</p>
+
+            <form class="name">
+                <label for="name"><strong>Mitt namn:</strong></label><br>
+                <input type="text" id="name" name="name"><br>
+            </form>
+            <br>
+            <button onclick="(startButton)">Nu kör vi!</button>
+
+        </div>   
+
         <video autoplay="autoplay" loop class="backgroundVid">
             <source src="Videos/backgroundVid.mp4" type="video/mp4">
         </video>
 
 
-    <button onclick="(startButton)">Nu kör vi!</button>
+
+    </div>
 
 </body>
 </html>
