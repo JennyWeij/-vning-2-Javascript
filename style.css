@@ -28,15 +28,26 @@ body {
     font-size: 1.5rem;
 }
 
-button {
-    background-color: green;
-    opacity: 70%;
-    color: white;
-    border-radius: 0.5rem;
+.startButton {
+    padding: 15px 25px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #047b4f;
     border: none;
-    border-style: outset;
-    width: 7rem;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    width: 9rem;
     height: 3rem;
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.startButton:hover {background-color: #3e8e41}
+
+.startButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
