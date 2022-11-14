@@ -3,6 +3,7 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
+    font-family: 'Encode Sans SC', sans-serif;
 }
 
 .backgroundVid {
@@ -41,7 +42,7 @@ body {
     width: 9rem;
     height: 3rem;
     font-size: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Encode Sans SC', sans-serif;
 }
 
 .startButton:hover {background-color: #3e8e41}
