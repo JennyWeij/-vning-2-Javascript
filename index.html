@@ -12,26 +12,25 @@
 </head>
 <body>
 
-    <video autoplay loop muted class="backgroundVid">
-        <source src="./Videos/backgroundVid.mp4" type="video/mp4">
+    <video autoplay loop muted class="backgroundVid" id="bgVid">
+        <source src="./Videos/backgroundStartVideo.mp4" type="video/mp4">
     </video>
 
-    <audio>
-        
+
+    <audio autoplay loop class="backgroundAudio" id="bgAudio"></audio>
+        <source src="./Music/backgroundStartAudio.m4a" type="audio/m4a">
     </audio>
 
     <div class="container">
-        <div class="rubrikStart">
-            <h1>Välkommen till PlanetEn!</h1><br>
-            <p class="textStartsida">Här får du lära dig mer om vår fantastiska planet och några spännande djur.<br>
-            Fyll i ditt namn och klicka på knappen så kör vi igång!</p>
-
-            <form class="name">
-                <label for="userName"><strong>Mitt namn:</strong></label><br>
-                <input type="text" id="userName" name="name"><br>
-            </form>
+        <div>
+            <h1 class="rubrikStart" id="rubrik"></h1><br>
+            <p class="textStartsida" id="explainText">Här får du lära dig mer om vår fantastiska planet och några spännande djur. Fyll i ditt namn och klicka på knappen så kör vi igång!</p>
+        </div>
+                <label class="userName" id="user"><strong>Mitt namn:</strong></label><br>
+                <input class="userInputField" type="text" id="userInput" name="name"><br>
             <br>
-            <button class="startButton">Nu kör vi!</button>
+            <button class="startButton" id="btn-1"></button>
+            <button class="secondButton startButton2" id="btn-2"></button>
 
         </div>   
 
