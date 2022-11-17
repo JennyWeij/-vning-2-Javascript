@@ -1,4 +1,6 @@
-window.addEventListener("DOMContentLoaded", main) 
+window.addEventListener("DOMContentLoaded", main);
+
+let userName = "";
 
 /*kom ihåg att fördröja texten och knappen och låt videon spela ett par sekunder först*/ 
 function main() {
@@ -6,10 +8,10 @@ function main() {
     // setAllConstants();
 }
 
-
-/*Startsida som välkomnar användaren och ber denne fyll i sitt namn */
+/** Syftet med funktionenStartsida som välkomnar användaren och ber denne fyll i sitt namn */
 function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     const rubrikStart = document.getElementById("rubrik");
+    const myInputField = document.getElementById("userName");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
 
@@ -19,9 +21,14 @@ function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     startButton.textContent = "Nu kör vi!";
     startButton.addEventListener("click", loadGorillaOrPanda);
 
+    startButton.onclick = function() {
+        userName = myInputField.value 
+        loadGorillaOrPanda();
+    }
+
 }
 
-/*Sida som välkomnar användaren med tidigare ifyllt namn, sidan
+/** Sida som välkomnar användaren med tidigare ifyllt namn, sidan
 låter användaren välja att börja lära sig mer om gorillan eller pandan */
 function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
     const rubrikStart = document.getElementById("rubrik");
@@ -39,7 +46,7 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
 
     document.getElementById("myInputField").style.display = "none";
 
-    rubrikStart.textContent = "Välkommen NAMN!"; 
+    rubrikStart.textContent = "Välkommen " + userName + "!"; 
     textStartsida.textContent = "Du ska få lära dig mer om pandor och gorillor. Vilken av dem vill du börja lära dig om?";
     
     startButton.textContent = "Gorilla";
@@ -49,13 +56,13 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
 
 }
 
-/*Sida som låter användaren lär sig mer om gorillan */
+/** Sida som låter användaren lär sig mer om gorillan */
 function loadGorilla() { /*En knapp med texten "Starta quiz" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
-    
+
     changeVideo("./Videos/gorillaVideo.mp4");
 
     textStartsida.textContent = "För att lära dig mer om gorilla kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
@@ -68,7 +75,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
 
 }
 
-/*Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
+/** Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
 function loadQuizGorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 const textStartsida = document.getElementById("explainText");
 const startButton = document.getElementById("btn-1");
@@ -85,8 +92,8 @@ startButton.textContent = "Sant";
 secondButton.textContent = "Falskt";
 }
 
-/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Correct */
-/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Wrong */
+/** Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Correct */
+/** Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Wrong */
 
 /*Sida som visar den andra frågan för användaren, load quizGorillaQ2 */
 
