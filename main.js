@@ -6,7 +6,6 @@ let userName = "";
 /*kom ihåg att fördröja texten och knappen och låt videon spela ett par sekunder först*/ 
 function main() {
     loadStartPage();
-    // setAllConstants();
 }
 
 /** Syftet med funktionenStartsida som välkomnar användaren och ber denne fyll i sitt namn */
@@ -28,6 +27,7 @@ function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     }
 
 }
+
 
 /** Sida som välkomnar användaren med tidigare ifyllt namn, sidan
 låter användaren välja att börja lära sig mer om gorillan eller pandan */
