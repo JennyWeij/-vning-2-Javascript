@@ -8,15 +8,7 @@ function main() {
     // setAllConstants();
 }
 
-/* function setAllConstants() {
-    const rubrikStart = document.getElementById("rubrik");
-    const textStartsida = document.querySelector(".textStartsida");
-    const startButton = document.querySelector(".startButton");
-    const secondButton = document.getElementById("btn-2");
-    const userInputField = document.getElementById("userInput");
-}*/
-
-/*Startsida som låter användaren lär sig mer om gorillan */
+/*Startsida som välkomnar användaren och ber denne fyll i sitt namn */
 function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
