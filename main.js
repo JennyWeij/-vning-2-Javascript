@@ -28,8 +28,7 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
     
-    
-    // const secondButton2 = document.createElement("button");
+    // Davids tillägg efter handledning: const secondButton2 = document.createElement("button");
 
     // div.innerHTML = "";
     // div.append(rubrikStart, textStartsida, startButton, secondButton);
@@ -68,6 +67,8 @@ const textStartsida = document.getElementById("explainText");
 const startButton = document.getElementById("btn-1");
 const secondButton = document.getElementById("btn-2");
 
+
+ /*lägg till bild på gorilla i bakgrunden*/
 textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
 
 startButton.textContent = "Sant";
@@ -91,7 +92,6 @@ secondButton.textContent = "Falskt";
 function loadPanda() { /*En knapp med texten "Starta quiz" */
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
-    const secondButton = document.getElementById("btn-2");
     changeVideo("./Videos/pandaVideo.mp4");
 
     textStartsida.textContent = "För att lära dig mer om pandan kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
@@ -108,6 +108,8 @@ const startButton = document.getElementById("btn-1");
 const secondButton = document.getElementById("btn-2");
 
 textStartsida.textContent = "Äter en panda 30 kilo bambu/dag?";
+
+ /*lägg till bild på gorilla i bakgrunden*/
 
 startButton.textContent = "Sant";
 secondButton.textContent = "Falskt";

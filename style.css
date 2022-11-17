@@ -1,6 +1,11 @@
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: 'Encode Sans SC', sans-serif;
+    height: 100%;
 }
 
 .backgroundStart {
@@ -16,19 +21,22 @@ body {
     text-align: center;
     width: 100%;
     height: 100%;
+    position: absolute;
+    inset: 0;
+    background: #00000022;
 }
 
 .rubrikStart {
     text-align: center;
     font-size: 6rem;
-    color: green;
+    color: white;
 
 }
 
 .textStartsida {
     font-size: 3rem;
     z-index: 1;
-    color: green;
+    color: white;
     text-align: center;
     margin-top: 2rem;
 }
