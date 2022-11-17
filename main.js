@@ -6,11 +6,13 @@ function main() {
     // setAllConstants();
 }
 
+
 /*Startsida som välkomnar användaren och ber denne fyll i sitt namn */
 function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
+    userName = input.value;
 
     rubrikStart.textContent = "Välkommen till PlanetEn!";
     textStartsida.textContent = "Här får du lära dig mer om två stycken spännande djur. Fyll i ditt namn och klicka på knappen så kör vi igång!";
@@ -28,13 +30,16 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
     
-    // Davids tillägg efter handledning: const secondButton2 = document.createElement("button");
+    // Davids kommentarer efter handledning: const secondButton2 = document.createElement("button");
 
     // div.innerHTML = "";
     // div.append(rubrikStart, textStartsida, startButton, secondButton);
 
 
     document.getElementById("myInputField").style.display = "none";
+
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
 
     rubrikStart.textContent = "Välkommen NAMN!"; 
     textStartsida.textContent = "Du ska få lära dig mer om pandor och gorillor. Vilken av dem vill du börja lära dig om?";
@@ -59,6 +64,9 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
     startButton.textContent = "Starta quiz";
     startButton.addEventListener("click", loadQuizGorilla);
 
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+
 }
 
 /*Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
@@ -70,6 +78,9 @@ const secondButton = document.getElementById("btn-2");
 
  /*lägg till bild på gorilla i bakgrunden*/
 textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
+
+ // Gör knappen synlig
+ secondButton.classList.remove("secondButton");
 
 startButton.textContent = "Sant";
 secondButton.textContent = "Falskt";
@@ -98,6 +109,17 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
     
     startButton.textContent = "Starta quiz";
     startButton.addEventListener("click", loadQuizPanda);
+
+        // TEST ELLEN
+
+        startButton.textContent = "Starta quiz";
+
+        startButton.addEventListener("click", loadQuizPanda);
+    
+        // Gör knappen osynlig
+        secondButton.classList.add("secondButton");
+    
+        // TEST ELLEN
     
 }
 
@@ -113,6 +135,9 @@ textStartsida.textContent = "Äter en panda 30 kilo bambu/dag?";
 
 startButton.textContent = "Sant";
 secondButton.textContent = "Falskt";
+
+  // Gör knappen synlig
+  secondButton.classList.remove("secondButton");
 
 }
 
