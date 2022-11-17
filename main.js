@@ -77,19 +77,19 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
 
 /** Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
 function loadQuizGorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
-const textStartsida = document.getElementById("explainText");
-const startButton = document.getElementById("btn-1");
-const secondButton = document.getElementById("btn-2");
+    const textStartsida = document.getElementById("explainText");
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
 
 
- /*lägg till bild på gorilla i bakgrunden*/
-textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
+    /*lägg till bild på gorilla i bakgrunden*/
+    textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
 
- // Gör knappen synlig
- secondButton.classList.remove("secondButton");
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
 
-startButton.textContent = "Sant";
-secondButton.textContent = "Falskt";
+    startButton.textContent = "Sant";
+    secondButton.textContent = "Falskt";
 }
 
 /** Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Correct */
@@ -120,25 +120,25 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
     startButton.addEventListener("click", loadQuizPanda);
     
         // Gör knappen osynlig
-        secondButton.classList.add("secondButton");
+    secondButton.classList.add("secondButton");
     
 }
 
 /*Sida som låter användaren göra en quiz, med tre frågor, om pandor */
 function loadQuizPanda() { /*TVÅ knappar med texten "Sant" & "Falskt" */
-const textStartsida = document.getElementById("explainText");
-const startButton = document.getElementById("btn-1");
-const secondButton = document.getElementById("btn-2");
+    const textStartsida = document.getElementById("explainText");
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
 
-textStartsida.textContent = "Äter en panda 30 kilo bambu/dag?";
+    textStartsida.textContent = "Äter en panda 30 kilo bambu/dag?";
 
- /*lägg till bild på gorilla i bakgrunden*/
+    /*lägg till bild på gorilla i bakgrunden*/
 
-startButton.textContent = "Sant";
-secondButton.textContent = "Falskt";
+    startButton.textContent = "Sant";
+    secondButton.textContent = "Falskt";
 
-  // Gör knappen synlig
-  secondButton.classList.remove("secondButton");
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
 
 }
 
