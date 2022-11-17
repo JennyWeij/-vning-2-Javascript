@@ -69,7 +69,6 @@ const secondButton = document.getElementById("btn-2");
 textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
 
 startButton.textContent = "Sant";
-secondButton.classList.toggle("secondButton");
 secondButton.textContent = "Falskt";
 }
 
