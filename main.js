@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", main);
-
+/**Variabel som sparar namnet från inputfältet */
 let userName = "";
 
 /*kom ihåg att fördröja texten och knappen och låt videon spela ett par sekunder först*/ 
@@ -115,17 +115,12 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
 
     textStartsida.textContent = "För att lära dig mer om pandan kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
 
+    startButton.textContent = "Starta quiz";
 
-        // TEST ELLEN
-
-        startButton.textContent = "Starta quiz";
-
-        startButton.addEventListener("click", loadQuizPanda);
+    startButton.addEventListener("click", loadQuizPanda);
     
         // Gör knappen osynlig
         secondButton.classList.add("secondButton");
-    
-        // TEST ELLEN
     
 }
 
