@@ -16,6 +16,7 @@ function main() {
     const userInputField = document.getElementById("userInput");
 }*/
 
+/*Startsida som låter användaren lär sig mer om gorillan */
 function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
@@ -29,6 +30,8 @@ function loadStartPage() { /*En knapp med texten "Nu kör vi" */
 
 }
 
+/*Sida som välkomnar användaren med tidigare ifyllt namn, sidan
+låter användaren välja att börja lära sig mer om gorillan eller pandan */
 function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
@@ -48,7 +51,7 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
 
 }
 
-/*Sida om låter användaren lär sig mer om gorillan */
+/*Sida som låter användaren lär sig mer om gorillan */
 function loadGorilla() { /*En knapp med texten "Starta quiz" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
@@ -61,7 +64,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
 
 }
 
-/*Sida om låter användaren göra en quiz om gorillor */
+/*Sida som låter användaren göra en quiz om gorillor */
 function loadQuizGorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 const textStartsida = document.getElementById("explainText");
 const startButton = document.getElementById("btn-1");
@@ -73,7 +76,7 @@ startButton.textContent = "Sant";
 secondButton.textContent = "Falskt";
 }
 
-/*Sida om låter användaren lär sig mer om pandan */
+/*Sida som låter användaren lär sig mer om pandan */
 function loadPanda() { /*En knapp med texten "Starta quiz" */
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
@@ -86,7 +89,7 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
     
 }
 
-/*Sida om låter användaren göra en quiz om pandor */
+/*Sida som låter användaren göra en quiz om pandor */
 function loadQuizPanda() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 const textStartsida = document.getElementById("explainText");
 const startButton = document.getElementById("btn-1");
