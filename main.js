@@ -27,6 +27,13 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    
+    
+    // const secondButton2 = document.createElement("button");
+
+    // div.innerHTML = "";
+    // div.append(rubrikStart, textStartsida, startButton, secondButton);
+
 
     document.getElementById("myInputField").style.display = "none";
 
@@ -46,6 +53,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
+    changeVideo("./Videos/gorillaVideo.mp4");
 
     textStartsida.textContent = "För att lära dig mer om gorilla kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
     
@@ -84,6 +92,7 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    changeVideo("./Videos/pandaVideo.mp4");
 
     textStartsida.textContent = "För att lära dig mer om pandan kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
     
@@ -104,6 +113,21 @@ startButton.textContent = "Sant";
 secondButton.textContent = "Falskt";
 
 }
+
+function changeVideo(src) {
+    const video = document.querySelector('video');
+    video.src = src
+}
+
+
+function changePicture(src) {
+    const picture = document.querySelector('picture');
+    picture.src = src
+}
+
+
+// changeVideo("./Videos/gorillaVideo.mp4");
+// changeVideo("./Videos/pandaVideo.mp4");
 
 /*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizPandaaQ1Correct */
 /*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizPandaQ1Wrong */
