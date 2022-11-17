@@ -79,11 +79,11 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
 
 /** Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
 function loadQuiz1Gorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
-    const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
 
     document.getElementById("textBox").innerHTML = "";
+    document.getElementById("bgStart").innerHTML = "";
     
     /*lägg till bild på gorilla i bakgrunden*/
     //textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
@@ -168,6 +168,9 @@ function loadQuizQ1Panda() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 
     document.getElementById("textBox").innerHTML = "";
     document.body.append(p);
+
+    // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
+    // div.append(rubrikStart, textStartsida, startButton, secondButton);
 
     /*lägg till bild på gorilla i bakgrunden*/
 
