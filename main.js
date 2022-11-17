@@ -1,7 +1,5 @@
 window.addEventListener("DOMContentLoaded", main) 
 
-let userInput = "Namn";
-
 /*kom ihåg att fördröja texten och knappen och låt videon spela ett par sekunder först*/ 
 function main() {
     loadStartPage();
@@ -56,7 +54,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
 
 }
 
-/*Sida som låter användaren göra en quiz om gorillor */
+/*Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
 function loadQuizGorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 const textStartsida = document.getElementById("explainText");
 const startButton = document.getElementById("btn-1");
@@ -67,6 +65,19 @@ textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
 startButton.textContent = "Sant";
 secondButton.textContent = "Falskt";
 }
+
+/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Correct */
+/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Wrong */
+
+/*Sida som visar den andra frågan för användaren, load quizGorillaQ2 */
+
+/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ2Correct */
+/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizGorillaQ2Wrong */
+
+/*Sida som visar den andra frågan för användaren, load quizGorillaQ3 */
+
+/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ3Correct */
+/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizGorillaQ3Wrong */
 
 /*Sida som låter användaren lär sig mer om pandan */
 function loadPanda() { /*En knapp med texten "Starta quiz" */
@@ -81,7 +92,7 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
     
 }
 
-/*Sida som låter användaren göra en quiz om pandor */
+/*Sida som låter användaren göra en quiz, med tre frågor, om pandor */
 function loadQuizPanda() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 const textStartsida = document.getElementById("explainText");
 const startButton = document.getElementById("btn-1");
@@ -94,3 +105,15 @@ secondButton.textContent = "Falskt";
 
 }
 
+/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizPandaaQ1Correct */
+/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizPandaQ1Wrong */
+
+/*Sida som visar den andra frågan för användaren, load quizPandaaQ2 */
+
+/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizPandaaQ2Correct */
+/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizPandaQ2Wrong */
+
+/*Sida som visar den andra frågan för användaren, load quizPandaaQ3 */
+
+/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizPandaaQ3Correct */
+/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizPandaQ3Wrong */
