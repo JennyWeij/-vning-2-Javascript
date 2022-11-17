@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", main);
+
 /**Variabel som sparar namnet från inputfältet */
 let userName = "";
 
@@ -19,7 +20,7 @@ function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     textStartsida.textContent = "Här får du lära dig mer om två stycken spännande djur. Fyll i ditt namn och klicka på knappen så kör vi igång!";
     
     startButton.textContent = "Nu kör vi!";
-    startButton.addEventListener("click", loadGorillaOrPanda);
+    startButton.onclick = loadGorillaOrPanda;
 
     startButton.onclick = function() {
         userName = myInputField.value 
@@ -50,9 +51,9 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
     textStartsida.textContent = "Du ska få lära dig mer om pandor och gorillor. Vilken av dem vill du börja lära dig om?";
     
     startButton.textContent = "Gorilla";
-    startButton.addEventListener("click", loadGorilla)
+    startButton.onclick = loadGorilla;
     secondButton.textContent = "Panda";
-    secondButton.addEventListener("click", loadPanda);
+    secondButton.onclick = loadPanda;
 
 }
 
@@ -68,7 +69,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
     textStartsida.textContent = "För att lära dig mer om gorilla kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
     
     startButton.textContent = "Starta quiz";
-    startButton.addEventListener("click", loadQuizGorilla);
+    startButton.onclick = loadQuizGorilla;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -117,7 +118,7 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
 
     startButton.textContent = "Starta quiz";
 
-    startButton.addEventListener("click", loadQuizPanda);
+    startButton.onclick = loadQuizPanda;
     
         // Gör knappen osynlig
     secondButton.classList.add("secondButton");
