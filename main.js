@@ -70,7 +70,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
     textStartsida.textContent = "För att lära dig mer om gorilla kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
     
     startButton.textContent = "Starta quiz";
-    startButton.onclick = loadQuizGorilla;
+    startButton.onclick = loadQuiz1Gorilla;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -78,20 +78,51 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
 }
 
 /** Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
-function loadQuizGorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
+function loadQuiz1Gorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
 
-
+    document.getElementById("textBox").innerHTML = "";
+    
     /*lägg till bild på gorilla i bakgrunden*/
-    textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
+    //textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
+
+    startButton.onclick = loadGorillaQuizQ1Correct;
+    secondButton.onclick = loadGorillaQuizQ1Wrong;
+
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
+}
+
+/**Sida som visar att användaren har svarat rätt på fråga 1. */
+function loadGorillaQuizQ1Correct() {
+    const textStartsida = document.getElementById("explainText");
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+
+    startButton.textContent = "Nästa fråga";
+
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+}
+
+/**Sida som visar att användaren har svarat fel på fråga 1. */
+function loadGorillaQuizQ1Wrong() {
+    const textStartsida = document.getElementById("explainText");
+    const startButton = document.getElementById("btn-1");
+    
+    startButton.textContent = "Nästa fråga";
+    
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+
 }
 
 /** Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Correct */
@@ -130,11 +161,13 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
 
 /**Sida som låter användaren göra en quiz, med tre frågor, om pandor */
 function loadQuizQ1Panda() { /*TVÅ knappar med texten "Sant" & "Falskt" */
-    const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
 
-    textStartsida.textContent = "Äter en panda 30 kilo bambu/dag?";
+    p.textContent = "Äter en panda 30 kilo bambu/dag?";
+
+    document.getElementById("textBox").innerHTML = "";
+    document.body.append(p);
 
     /*lägg till bild på gorilla i bakgrunden*/
 
