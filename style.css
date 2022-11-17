@@ -38,7 +38,7 @@ body {
     z-index: 1;
     color: white;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .userName {
@@ -56,11 +56,12 @@ body {
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
-    width: 11rem;
+    width: 13rem;
     height: 3rem;
     font-size: 1.2rem;
     font-family: 'Encode Sans SC', sans-serif;
-    margin-right: 9rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
 }
 
 
