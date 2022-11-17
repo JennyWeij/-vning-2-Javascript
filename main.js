@@ -12,7 +12,6 @@ function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
-    userName = input.value;
 
     rubrikStart.textContent = "Välkommen till PlanetEn!";
     textStartsida.textContent = "Här får du lära dig mer om två stycken spännande djur. Fyll i ditt namn och klicka på knappen så kör vi igång!";
@@ -35,18 +34,16 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
     // div.innerHTML = "";
     // div.append(rubrikStart, textStartsida, startButton, secondButton);
 
+ // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
 
     document.getElementById("myInputField").style.display = "none";
-
-    // Gör knappen synlig
-    secondButton.classList.remove("secondButton");
 
     rubrikStart.textContent = "Välkommen NAMN!"; 
     textStartsida.textContent = "Du ska få lära dig mer om pandor och gorillor. Vilken av dem vill du börja lära dig om?";
     
     startButton.textContent = "Gorilla";
     startButton.addEventListener("click", loadGorilla)
-    secondButton.classList.toggle("secondButton");
     secondButton.textContent = "Panda";
     secondButton.addEventListener("click", loadPanda);
 
@@ -57,6 +54,8 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+    
     changeVideo("./Videos/gorillaVideo.mp4");
 
     textStartsida.textContent = "För att lära dig mer om gorilla kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
@@ -103,12 +102,12 @@ secondButton.textContent = "Falskt";
 function loadPanda() { /*En knapp med texten "Starta quiz" */
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+
     changeVideo("./Videos/pandaVideo.mp4");
 
     textStartsida.textContent = "För att lära dig mer om pandan kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
-    
-    startButton.textContent = "Starta quiz";
-    startButton.addEventListener("click", loadQuizPanda);
+
 
         // TEST ELLEN
 
