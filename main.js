@@ -78,12 +78,11 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
 }
 
 /** Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
-function loadQuiz1Gorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
+function loadQuiz1Gorilla() { /*Ta bort video ersätt med bild*/
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
 
     document.getElementById("textBox").innerHTML = "";
-    document.getElementById("bgStart").innerHTML = "";
     
     /*lägg till bild på gorilla i bakgrunden*/
     //textStartsida.textContent = "Finns det mer än 1000 gorillor i världen?";
@@ -125,18 +124,10 @@ function loadGorillaQuizQ1Wrong() {
 
 }
 
-/** Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Correct */
-/** Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizGorillaQ1Wrong */
+function loadGorillaQ2() {
 
-/*Sida som visar den andra frågan för användaren, load quizGorillaQ2 */
-
-/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ2Correct */
-/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizGorillaQ2Wrong */
-
-/*Sida som visar den andra frågan för användaren, load quizGorillaQ3 */
-
-/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizGorillaQ3Correct */
-/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizGorillaQ3Wrong */
+    //Fråga: Finns det mer än 10     gorillaarter finns det i världen?
+}
 
 /*Sida som låter användaren lär sig mer om pandan */
 function loadPanda() { /*En knapp med texten "Starta quiz" */
@@ -187,11 +178,11 @@ function loadQuizQ1Panda() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 
 /**Sida som visar att användaren har svarat rätt på fråga 1. */
 function loadPandaQuizQ1Correct() {
-    const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
 
     startButton.textContent = "Nästa fråga";
+
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -199,7 +190,6 @@ function loadPandaQuizQ1Correct() {
 
 /**Sida som visar att användaren har svarat fel på fråga 1. */
 function loadPandaQuizQ1Wrong() {
-    const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     
     startButton.textContent = "Nästa fråga";
@@ -207,6 +197,79 @@ function loadPandaQuizQ1Wrong() {
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
 
+}
+
+/**Sida som visar fråga 2 för användaren. */
+function loadQuizQ2Panda() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+
+    p.textContent = "Äter en panda 30 kilo bambu/dag?";
+
+    document.getElementById("textBox").innerHTML = "";
+    document.body.append(p);
+
+    // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
+    // div.append(rubrikStart, textStartsida, startButton, secondButton);
+
+    /*lägg till bild på gorilla i bakgrunden*/
+
+    startButton.textContent = "Sant";
+    secondButton.textContent = "Falskt";
+
+    startButton.onclick = loadPandaQuizQ2Correct;
+    secondButton.onclick = loadPandaQuizQ2Wrong;
+
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
+}
+
+/**Sida som visar att användaren har svarat rätt på fråga 2. */
+function loadPandaQuizQ2Correct() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+
+    startButton.textContent = "Nästa fråga";
+
+
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+}
+
+/**Sida som visar att användaren har svarat fel på fråga 2. */
+function loadPandaQuizQ2Wrong() {
+    const startButton = document.getElementById("btn-1");
+    
+    startButton.textContent = "Nästa fråga";
+    
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+
+}
+
+/**Sida som visar fråga 3 för användaren. */
+function loadQuizQ3Panda() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+
+    p.textContent = "Äter en panda 30 kilo bambu/dag?";
+
+    document.getElementById("textBox").innerHTML = "";
+    document.body.append(p);
+
+    // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
+    // div.append(rubrikStart, textStartsida, startButton, secondButton);
+
+    /*lägg till bild på gorilla i bakgrunden*/
+
+    startButton.textContent = "Sant";
+    secondButton.textContent = "Falskt";
+
+    startButton.onclick = loadPandaQuizQ3Correct;
+    secondButton.onclick = loadPandaQuizQ3Wrong;
+
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
 }
 
 
@@ -219,23 +282,10 @@ function changeVideo(src) {
 
 
 function changePicture(src) {
-    const picture = document.querySelector('picture');
+    const picture = document.querySelector('img');
     picture.src = src
 }
 
 
 // changeVideo("./Videos/gorillaVideo.mp4");
 // changeVideo("./Videos/pandaVideo.mp4");
-
-/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizPandaaQ1Correct */
-/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizPandaQ1Wrong */
-
-/*Sida som visar den andra frågan för användaren, load quizPandaaQ2 */
-
-/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizPandaaQ2Correct */
-/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizPandaQ2Wrong */
-
-/*Sida som visar den andra frågan för användaren, load quizPandaaQ3 */
-
-/*Sida som visar att användaren har svarat rätt, låter användaren att gå vidare till nästa fråga load quizPandaaQ3Correct */
-/*Sida som visar att användaren har svarat fel, låter användaren att gå vidare till nästa fråga load quizPandaQ3Wrong */
