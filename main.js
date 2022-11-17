@@ -155,10 +155,10 @@ function loadQuizQ1Panda() { /*TVÅ knappar med texten "Sant" & "Falskt" */
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
 
-    p.textContent = "Äter en panda 30 kilo bambu/dag?";
+    // p.textContent = "Äter en panda 30 kilo bambu/dag?";
 
-    document.getElementById("textBox").innerHTML = "";
-    document.body.append(p);
+    // document.getElementById("textBox").innerHTML = "";
+    // document.body.append(p);
 
     // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
     // div.append(rubrikStart, textStartsida, startButton, secondButton);
@@ -182,7 +182,7 @@ function loadPandaQuizQ1Correct() {
     const secondButton = document.getElementById("btn-2");
 
     startButton.textContent = "Nästa fråga";
-
+    startButton.onclick = loadQuizQ2Panda;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -191,8 +191,10 @@ function loadPandaQuizQ1Correct() {
 /**Sida som visar att användaren har svarat fel på fråga 1. */
 function loadPandaQuizQ1Wrong() {
     const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
     
     startButton.textContent = "Nästa fråga";
+    startButton.onclick = loadQuizQ2Panda;
     
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -230,6 +232,7 @@ function loadPandaQuizQ2Correct() {
     const secondButton = document.getElementById("btn-2");
 
     startButton.textContent = "Nästa fråga";
+    startButton.onclick = loadQuizQ3Panda;
 
 
     // Gör knappen osynlig
@@ -239,8 +242,10 @@ function loadPandaQuizQ2Correct() {
 /**Sida som visar att användaren har svarat fel på fråga 2. */
 function loadPandaQuizQ2Wrong() {
     const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
     
     startButton.textContent = "Nästa fråga";
+    startButton.onclick = loadQuizQ3Panda;
     
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -272,8 +277,36 @@ function loadQuizQ3Panda() {
     secondButton.classList.remove("secondButton");
 }
 
+/**Sida som visar att användaren har svarat rätt på fråga 2. */
+function loadPandaQuizQ3Correct() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
 
+    startButton.textContent = "Klar!";
+    secondButton.textContent = "Gör gorillans quiz";
 
+    //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
+    secondButton.onclick = loadGorilla;
+
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+}
+
+/**Sida som visar att användaren har svarat fel på fråga 2. */
+function loadPandaQuizQ3Wrong() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+    
+    startButton.textContent = "Klar!";
+    secondButton.textContent = "Gör gorillans quiz";
+
+    //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
+    secondButton.onclick = loadGorilla;
+
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+
+}
 
 function changeVideo(src) {
     const video = document.querySelector('video');
