@@ -36,6 +36,8 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
 
+    document.getElementById("myInputField").style.display = "none";
+
     rubrikStart.textContent = "Välkommen NAMN!"; 
     textStartsida.textContent = "Du ska få lära dig mer om pandor och gorillor. Vilken av dem vill du börja lära dig om?";
     
@@ -55,10 +57,11 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
     textStartsida.textContent = "För att lära dig mer om gorilla kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
     
     startButton.textContent = "Starta quiz";
+    startButton.addEventListener("click", loadQuizGorilla);
 
 }
 
-function quizGorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
+function loadQuizGorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 const textStartsida = document.getElementById("explainText");
 const startButton = document.getElementById("btn-1");
 const secondButton = document.getElementById("btn-2");
@@ -77,9 +80,10 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
     const startButton = document.getElementById("btn-1");
 
     rubrikStart.textContent = "Pandan";
-    textStartsida.textContent = "För att lära dig mer om gorilla kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
+    textStartsida.textContent = "För att lära dig mer om pandan kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
     
     startButton.textContent = "Starta quiz";
+    startButton.addEventListener("click", loadQuizGorilla);
     
 }
 
