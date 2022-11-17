@@ -20,7 +20,6 @@ function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
-    const backVideo = document.getElementById("bgVid1");
 
     rubrikStart.textContent = "Välkommen till PlanetEn!";
     textStartsida.textContent = "Här får du lära dig mer om två stycken spännande djur. Fyll i ditt namn och klicka på knappen så kör vi igång!";
@@ -49,6 +48,7 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
 
 }
 
+/*Sida om låter användaren lär sig mer om gorillan */
 function loadGorilla() { /*En knapp med texten "Starta quiz" */
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
@@ -61,6 +61,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
 
 }
 
+/*Sida om låter användaren göra en quiz om gorillor */
 function loadQuizGorilla() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 const textStartsida = document.getElementById("explainText");
 const startButton = document.getElementById("btn-1");
@@ -72,29 +73,29 @@ startButton.textContent = "Sant";
 secondButton.textContent = "Falskt";
 }
 
-/*Sida om låter användaren lär sig mer om Pandan */
+/*Sida om låter användaren lär sig mer om pandan */
 function loadPanda() { /*En knapp med texten "Starta quiz" */
-    const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
 
-    rubrikStart.textContent = "Pandan";
     textStartsida.textContent = "För att lära dig mer om pandan kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
     
     startButton.textContent = "Starta quiz";
-    startButton.addEventListener("click", loadQuizGorilla);
+    startButton.addEventListener("click", loadQuizPanda);
     
 }
 
-// innerHTML
+/*Sida om låter användaren göra en quiz om pandor */
+function loadQuizPanda() { /*TVÅ knappar med texten "Sant" & "Falskt" */
+const textStartsida = document.getElementById("explainText");
+const startButton = document.getElementById("btn-1");
+const secondButton = document.getElementById("btn-2");
 
-// Fråga David om bakgrundsvideon, hur jag ändrar
-// Fråga David om quiz
-//Startsida, namn, klicka på knapp.
-//Knappar med Besöka gorilla eller pandan
-//Gorilla:
-//Quiz eller lär dig mer
-//Panda:
-//Quiz eller lär dig mer
+textStartsida.textContent = "Äter en panda 30 kilo bambu/dag?";
 
+startButton.textContent = "Sant";
+secondButton.textContent = "Falskt";
+
+}
 
