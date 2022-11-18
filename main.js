@@ -246,7 +246,7 @@ function loadGorillaQ3Correct() {
     secondButton.classList.remove("secondButton");
 
     startButton.onclick = loadPandaQ1;
-    // secondButton.onclick = window.location.href = 'https://www.wwf.se/stod/ge-en-gava/';
+    secondButton.onclick = window.open("https://www.wwf.se/stod/ge-en-gava/");
 }
 
 /**Sida som visar att användaren har svarat fel på påstående 1. */
@@ -465,7 +465,7 @@ function loadPandaQ3Correct() {
     startButton.textContent = "Tack och hej!";
     secondButton.textContent = "Gorillans quiz";
 
-    // startButton.onclick = location.href; "https://www.wwf.se/stod/ge-en-gava/";
+    startButton.onclick = window.open("https://www.wwf.se/stod/ge-en-gava/");
     secondButton.onclick = loadGorillaQ1;
 
     // Gör knappen synlig
