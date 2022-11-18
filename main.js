@@ -16,7 +16,7 @@ function loadStartPage() {
     const startButton = document.getElementById("btn-1");
 
     rubrikStart.textContent = "Välkommen till PlanetEn!";
-    textStartsida.textContent = "Här får du lära dig mer om två stycken spännande djur. \nFyll i ditt namn och klicka på knappen så kör vi igång!";
+    textStartsida.textContent = "Här kommer du att få lära dig om två stycken spännande djur. \nFyll i ditt namn och klicka på knappen så kör vi igång!";
     
     startButton.textContent = "Nu kör vi!";
     startButton.onclick = loadGorillaOrPanda;
@@ -42,7 +42,7 @@ function loadGorillaOrPanda() {
     document.getElementById("myInputField").style.display = "none";
 
     rubrikStart.textContent = "Välkommen " + userName + "!"; 
-    textStartsida.textContent = "Du ska få lära dig mer om pandor och gorillor. \nVilken av dem vill du börja lära dig om?";
+    textStartsida.textContent = "Du ska få lära dig mer om två mycket spännande djur;\n pandor och gorillor. \nVilken av dem vill du börja lära dig om?";
     
     startButton.textContent = "Gorilla";
     startButton.onclick = loadGorilla;
@@ -61,7 +61,7 @@ function loadGorilla() {
     changeVideo("./Videos/gorillaVideo.mp4");
 
     rubrikStart.textContent = "Gorillan";
-    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om gorillan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
     
     startButton.textContent = "Starta quiz";
     startButton.onclick = loadGorillaQ1;
@@ -83,7 +83,7 @@ function loadGorillaQ1() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "\nDet finns mer än 2000 gorillor \nsom lever i det vilda";
+    p.textContent = "\nDet finns mer än 2000 bergsgorillor \nsom lever i det vilda";
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
@@ -108,7 +108,7 @@ function loadGorillaQ1Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar, " + userName + "! \nDet finns bara runt 1100 gorillor som lever i det vilda. Gorillan delas in i två arter; \nvästlig och östlig gorilla.";
+    p.textContent = "Rätt svar, " + userName + "! Det finns bara runt 1100 bergsgorillor i det vilda. Gorillan delas in i två arter; västlig och östlig gorilla med bergsgorillan som underart.";
 
     startButton.textContent = "Nästa";
     startButton.onclick = loadGorillaQ2;
@@ -129,7 +129,7 @@ function loadGorillaQ1Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel svar, " + userName + ". \nDet finns bara runt 1100 gorillor i det vilda. Gorillan delas in i två arter; \nvästlig och östlig gorilla.";
+    p.textContent = "Tyvärr, fel svar, " + userName + ". Det finns bara runt 1100 bergsgorillor i det vilda. Gorillan delas in i två arter; västlig och östlig gorilla med bergsgorillan som underart.";
 
     startButton.textContent = "Nästa påstående";
     startButton.onclick = loadGorillaQ2;
@@ -237,7 +237,7 @@ function loadGorillaQ3Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar!\nEn fullvuxen hane kan faktiskt väga \nupp till 200 kg. \nBra jobbat, " + userName + "!"; 
+    p.textContent = "Rätt svar!\nEn fullvuxen hane kan faktiskt väga \nända upp till 200 kg. \nBra jobbat, " + userName + "!"; 
 
     startButton.textContent = "Pandans quiz";
     secondButton.textContent = "Tack och hej!";
@@ -260,7 +260,7 @@ function loadGorillaQ3Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel, " + userName + ".\nEn fullvuxen hane kan faktiskt väga \nupp till 200 kg. \nBra jobbat, " + userName + "!"; 
+    p.textContent = "Det var tyvärr fel svar, " + userName + ".\nEn fullvuxen hane kan faktiskt väga \nända upp till 200 kg. \nBra jobbat, " + userName + "!"; 
 
     startButton.textContent = "Pandans quiz";
     secondButton.textContent = "Tack och hej!";
@@ -273,28 +273,7 @@ function loadGorillaQ3Wrong() {
 
 }
 
-// function loadFromGorillaToPanda() {
-//     const rubrikStart = document.getElementById("rubrik");
-//     const textStartsida = document.getElementById("explainText");
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
-//     const p = document.createElement("quizText");
-
-//     document.getElementById("explainText").innerHTML = "";
-
-//     changeVideo("./Videos/pandaVideo.mp4");
-
-//     rubrikStart.textContent = "Panda";
-//     textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
-    
-//     startButton.textContent = "Starta quiz";
-//     startButton.onclick = loadPandaQ1;
-
-//     // Gör knappen osynlig
-//     secondButton.classList.add("secondButton");
-// }
-
-/*                        PANDA DELEN       */
+/**        PANDA-DELEN     */
 
 
 /*Sida som låter användaren lär sig mer om pandan */
