@@ -66,7 +66,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
     changeVideo("./Videos/gorillaVideo.mp4");
 
     rubrikStart.textContent = "Gorillan";
-    textStartsida.textContent = "För att lära dig mer om gorilla kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om gorillan kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
     
     startButton.textContent = "Starta quiz";
     startButton.onclick = loadGorillaQ1;
@@ -77,14 +77,17 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
 }
 
 /** Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
-function loadGorillaQ1() { /*Ta bort video ersätt med bild*/
+function loadGorillaQ1() { 
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-    
-    /*lägg till bild på gorilla i bakgrunden*/
-     // Fråga 1: Finns det mer än 1000 gorillor i världen?; 
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Det finns det mer än 2000 gorillor som lever i det vilda";
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
@@ -92,8 +95,8 @@ function loadGorillaQ1() { /*Ta bort video ersätt med bild*/
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
 
-    startButton.onclick = loadGorillaQ1Correct;
-    secondButton.onclick = loadGorillaQ1Wrong;
+    startButton.onclick = loadGorillaQ1Wrong;
+    secondButton.onclick = loadGorillaQ1Correct;
 
 }
 
@@ -102,6 +105,14 @@ function loadGorillaQ1Correct() {
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Rätt svar, " + userName + "! Det finns bara runt 1100 gorillor i det vilda. Gorillan delas in i två arter; västlig och östlig gorilla.";
 
     startButton.textContent = "Nästa fråga";
     startButton.onclick = loadGorillaQ2;
@@ -115,6 +126,17 @@ function loadGorillaQ1Wrong() {
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Det var tyvärr fel svar. Det finns bara runt 1100 gorillor i det vilda. Gorillan delas in i två arter; västlig och östlig gorilla.";
+
+    startButton.textContent = "Nästa fråga";
+    startButton.onclick = loadGorillaQ2;
     
     startButton.textContent = "Nästa fråga";
     
@@ -126,10 +148,15 @@ function loadGorillaQ1Wrong() {
 function loadGorillaQ2() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Fråga 2";
     
-    /*lägg till bild på gorilla i bakgrunden*/
      // Fråga 1: Finns det mer än 1000 gorillor i världen?; 
 
     // Gör knappen synlig
@@ -240,8 +267,6 @@ function loadPandaQ1() { /*TVÅ knappar med texten "Sant" & "Falskt" */
     document.getElementById("textBox").append(p);
     p.textContent = "Äter en panda 30 kilo bambu/dag?";
 
-    /*lägg till bild på panda i bakgrunden*/
-
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
 
@@ -306,13 +331,6 @@ function loadPandaQ2() {
 
     document.getElementById("textBox").append(p);
     p.textContent = "Panda Fråga nummer 2";
-    
-    // document.body.append(p);
-
-    // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
-    // div.append(rubrikStart, textStartsida, startButton, secondButton);
-
-    /*lägg till bild på gorilla i bakgrunden*/
 
     // Fråga 2: Pandor kan klättra i träd, och de kan simma. (SANT)
 
@@ -356,7 +374,7 @@ function loadPandaQ2Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel svar. Pandor spenderar faktiskt 10-16 timmar/dag på att äta och sover upp till 12 timmar/dag.";
+    p.textContent = "Det var tyvärr fel svar.";
 
     startButton.textContent = "Nästa fråga";
     startButton.onclick = loadPandaQ3;
@@ -370,18 +388,16 @@ function loadPandaQ2Wrong() {
 function loadPandaQ3() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
 
-    p.textContent = "Äter en panda 30 kilo bambu/dag?";
+    p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-    document.body.append(p);
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Panda Fråga nummer 3";
 
     // Fråga 3: Pandor bajsar upp till 20 gånger om dagen. (FALSKT)
-
-    // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
-    // div.append(rubrikStart, textStartsida, startButton, secondButton);
-
-    /*lägg till bild på gorilla i bakgrunden*/
 
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
@@ -397,6 +413,14 @@ function loadPandaQ3() {
 function loadPandaQ3Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Rätt svar!";
 
     startButton.textContent = "Klar!";
     secondButton.textContent = "Gör gorillans quiz";
@@ -414,14 +438,22 @@ function loadPandaQ3Correct() {
 function loadPandaQ3Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
 
-    //    Pandor bajsar 40 gånger om dagen
-    
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Rätt svar!";
+
     startButton.textContent = "Klar!";
     secondButton.textContent = "Gör gorillans quiz";
+    secondButton.onclick = loadGorilla;
+    //    Pandor bajsar 40 gånger om dagen
 
     //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
-    secondButton.onclick = loadGorilla;
+    
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -434,15 +466,4 @@ function changeVideo(src) {
 }
 
 
-function changePicture(src) {
-    const picture = document.querySelector('img');
-    picture.src = src
-}
-
-
-// changeVideo("./Videos/gorillaVideo.mp4");
-// changeVideo("./Videos/pandaVideo.mp4");
-
-    // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
-    // div.append(rubrikStart, textStartsida, startButton, secondButton);
 
