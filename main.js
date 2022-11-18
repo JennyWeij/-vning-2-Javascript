@@ -113,6 +113,7 @@ function loadGorillaQ1Correct() {
 function loadGorillaQ1Wrong() {
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
     
     startButton.textContent = "Nästa fråga";
     
@@ -142,6 +143,7 @@ function loadGorillaQ1Wrong() {
 // function loadGorillaQ2Wrong() {
 //     const textStartsida = document.getElementById("explainText");
 //     const startButton = document.getElementById("btn-1");
+//     const secondButton = document.getElementById("btn-2");
     
 //     startButton.textContent = "Nästa fråga";
     
@@ -151,7 +153,10 @@ function loadGorillaQ1Wrong() {
 // }
 
 // function loadGorillaQ3() {
+    // const startButton = document.getElementById("btn-1");
+    // const secondButton = document.getElementById("btn-2");
 
+    // document.getElementById("textBox").innerHTML = "";
 //     // Fråga 2: Finns det mer än 1000 gorillor i världen?;
 // }
 
