@@ -9,7 +9,7 @@ function main() {
 }
 
 /** Syftet med funktionenStartsida som välkomnar användaren och ber denne fyll i sitt namn */
-function loadStartPage() { /*En knapp med texten "Nu kör vi" */
+function loadStartPage() { 
     const rubrikStart = document.getElementById("rubrik");
     const myInputField = document.getElementById("userName");
     const textStartsida = document.getElementById("explainText");
@@ -36,11 +36,6 @@ function loadGorillaOrPanda() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
     
-    // Davids kommentarer efter handledning: const secondButton2 = document.createElement("button");
-
-    // div.innerHTML = "";
-    // div.append(rubrikStart, textStartsida, startButton, secondButton);
-
  // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 
@@ -66,7 +61,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
     changeVideo("./Videos/gorillaVideo.mp4");
 
     rubrikStart.textContent = "Gorillan";
-    textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om gorillan kommer du nu att få göra en quiz. \nDu kommer få ett påstående och väljer antingen Sant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
     
     startButton.textContent = "Starta quiz";
     startButton.onclick = loadGorillaQ1;
@@ -87,7 +82,7 @@ function loadGorillaQ1() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Fråga 1:\nDet finns mer än 2000 gorillor som lever i det vilda";
+    p.textContent = "\nDet finns mer än 2000 gorillor \nsom lever i det vilda";
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
@@ -100,7 +95,7 @@ function loadGorillaQ1() {
 
 }
 
-/**Sida som visar att användaren har svarat rätt på fråga 1. */
+/**Sida som visar att användaren har svarat rätt på påstående 1. */
 function loadGorillaQ1Correct() {
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
@@ -112,16 +107,16 @@ function loadGorillaQ1Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar, " + userName + "! Det finns bara runt 1100 gorillor i det vilda. :\nGorillan delas in i två arter; västlig och östlig gorilla.";
+    p.textContent = "Rätt svar, " + userName + "! \nDet finns bara runt 1100 gorillor som lever i det vilda. Gorillan delas in i två arter; \nvästlig och östlig gorilla.";
 
-    startButton.textContent = "Nästa fråga";
+    startButton.textContent = "Nästa";
     startButton.onclick = loadGorillaQ2;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
 }
 
-/**Sida som visar att användaren har svarat fel på fråga 1. */
+/**Sida som visar att användaren har svarat fel på påstående 1. */
 function loadGorillaQ1Wrong() {
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
@@ -133,12 +128,12 @@ function loadGorillaQ1Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel svar. :\nDet finns bara runt 1100 gorillor i det vilda. :\nGorillan delas in i två arter; västlig och östlig gorilla.";
+    p.textContent = "Det var tyvärr fel svar. \nDet finns bara runt 1100 gorillor i det vilda. Gorillan delas in i två arter; \nvästlig och östlig gorilla.";
 
-    startButton.textContent = "Nästa fråga";
+    startButton.textContent = "Nästa påstående";
     startButton.onclick = loadGorillaQ2;
     
-    startButton.textContent = "Nästa fråga";
+    startButton.textContent = "Nästa";
     
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -155,7 +150,7 @@ function loadGorillaQ2() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Fråga 2:\n"; 
+    p.textContent = "\nGorillor kan drabbas av samma sjukdomar \nsom vi människor"; 
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
@@ -167,7 +162,7 @@ function loadGorillaQ2() {
     secondButton.onclick = loadGorillaQ2Wrong;
 }
 
-/**Sida som visar att användaren har svarat rätt på fråga 1. */
+/**Sida som visar att användaren har svarat rätt på påstående 1. */
 function loadGorillaQ2Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -178,15 +173,16 @@ function loadGorillaQ2Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar:\n"; 
+    p.textContent = "Rätt svar!\n Eftersom människor och gorillor delar\n 98% DNA, är gorillor mottagliga för samma sjukdomar som vi människor."; 
 
-    startButton.textContent = "Nästa fråga";
+    startButton.textContent = "Nästa";
+    startButton.onclick = loadGorillaQ3;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
 }
 
-/**Sida som visar att användaren har svarat fel på fråga 1. */
+/**Sida som visar att användaren har svarat fel på påstående 1. */
 function loadGorillaQ2Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -197,9 +193,9 @@ function loadGorillaQ2Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel svar:\n"; 
+    p.textContent = "Tyvärr, fel svar.\nEftersom människor och gorillor delar\n 98% DNA, är gorillor mottagliga för samma sjukdomar som vi människor.";
     
-    startButton.textContent = "Nästa fråga";
+    startButton.textContent = "Nästa";
     startButton.onclick = loadGorillaQ3;
     
     // Gör knappen osynlig
@@ -217,7 +213,7 @@ function loadGorillaQ3() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Fråga 3:\n"; 
+    p.textContent = "\nEn fullvuxen gorillahane kan väga upp till\n 150 kilo"; 
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
@@ -225,11 +221,11 @@ function loadGorillaQ3() {
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
 
-    startButton.onclick = loadGorillaQ3Correct;
-    secondButton.onclick = loadGorillaQ3Wrong;
+    startButton.onclick = loadGorillaQ3Wrong;
+    secondButton.onclick = loadGorillaQ3Correct;
 }
 
-/**Sida som visar att användaren har svarat rätt på fråga 1. */
+/**Sida som visar att användaren har svarat rätt på påstående 1. */
 function loadGorillaQ3Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -240,7 +236,7 @@ function loadGorillaQ3Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt! Bravo:\n"; 
+    p.textContent = "\nRätt svar!\nEn fullvuxen hane kan faktiskt väga \nupp till 200kg"; 
 
     startButton.textContent = "Pandans quiz";
     secondButton.textContent = "Klar";
@@ -252,7 +248,7 @@ function loadGorillaQ3Correct() {
     // secondButton.onclick = LÄNK TILL WWF
 }
 
-/**Sida som visar att användaren har svarat fel på fråga 1. */
+/**Sida som visar att användaren har svarat fel på påstående 1. */
 function loadGorillaQ3Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -263,7 +259,7 @@ function loadGorillaQ3Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel:\n"; 
+    p.textContent = "\nDet var tyvärr fel\nEn fullvuxen hane kan faktiskt väga \nupp till 200kg"; 
 
     startButton.textContent = "Pandans quiz";
     secondButton.textContent = "Klar";
@@ -294,7 +290,7 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
     changeVideo("./Videos/pandaVideo.mp4");
     
     rubrikStart.textContent = "Pandan";
-    textStartsida.textContent = "För att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer få ett påstående och väljer antingen \nSant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
 
     startButton.textContent = "Starta quiz";
 
@@ -316,7 +312,7 @@ function loadPandaQ1() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Fråga 1:\nÄter en panda 30 kilo bambu/dag?";
+    p.textContent = "\n\nEn panda äter 30 kilo bambu/dag";
 
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
@@ -329,7 +325,7 @@ function loadPandaQ1() {
 
 }
 
-/**Sida som visar att användaren har svarat rätt på fråga 1. */
+/**Sida som visar att användaren har svarat rätt på påstående 1. */
 function loadPandaQ1Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -340,16 +336,16 @@ function loadPandaQ1Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt! Bravo! :\nPandor spenderar faktiskt 10-16 timmar/dag på att äta :\noch sover upp till 12 timmar/dag.";
+    p.textContent = "Rätt svar, " + userName + "!\nPandor spenderar faktiskt 10-16 timmar/dag \npå att äta och sover upp till \n12 timmar/dag.";
 
-    startButton.textContent = "Nästa fråga";
+    startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ2;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
 }
 
-/**Sida som visar att användaren har svarat fel på fråga 1. */
+/**Sida som visar att användaren har svarat fel på påstående 1. */
 function loadPandaQ1Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -360,9 +356,9 @@ function loadPandaQ1Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel svar. :\nPandor spenderar faktiskt 10-16 timmar/dag på att äta :\noch sover upp till 12 timmar/dag.";
+    p.textContent = "Det var tyvärr fel svar.\nPandor spenderar faktiskt 10-16 timmar/dag \npå att äta och sover upp till \n12 timmar/dag.";
     
-    startButton.textContent = "Nästa fråga";
+    startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ2;
     
     // Gör knappen osynlig
@@ -370,7 +366,7 @@ function loadPandaQ1Wrong() {
 
 }
 
-/**Sida som visar fråga 2 för användaren. */
+/**Sida som visar påstående 2 för användaren. */
 function loadPandaQ2() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -381,9 +377,9 @@ function loadPandaQ2() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Fråga 2:\nPanda Fråga nummer 2";
+    p.textContent = "\n\nPandor kan simma";
 
-    // Fråga 2: Pandor kan klättra i träd, och de kan simma. (SANT)
+    // påstående: . (SANT)
 
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
@@ -394,7 +390,7 @@ function loadPandaQ2() {
     secondButton.classList.remove("secondButton");
 }
 
-/**Sida som visar att användaren har svarat rätt på fråga 2. */
+/**Sida som visar att användaren har svarat rätt på påstående 2. */
 function loadPandaQ2Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -405,16 +401,16 @@ function loadPandaQ2Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar!:\n";
+    p.textContent = "Rätt svar!\nPandor kan simma och klättra i träd. \nEn panda som väger 130 kilo kan utan problem simma och klättra.";
     
-    startButton.textContent = "Nästa fråga";
+    startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ3;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
 }
 
-/**Sida som visar att användaren har svarat fel på fråga 2. */
+/**Sida som visar att användaren har svarat fel på påstående 2. */
 function loadPandaQ2Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -425,9 +421,9 @@ function loadPandaQ2Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel svar:\n.";
+    p.textContent = "Det var tyvärr fel svar.\nPandor kan både simma och klättra i träd. \nEn panda som väger 130 kilo kan utan problem simma och klättra.";
 
-    startButton.textContent = "Nästa fråga";
+    startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ3;
     
     // Gör knappen osynlig
@@ -435,7 +431,7 @@ function loadPandaQ2Wrong() {
 
 }
 
-/**Sida som visar fråga 3 för användaren. */
+/**Sida som visar påstående 3 för användaren. */
 function loadPandaQ3() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -446,21 +442,19 @@ function loadPandaQ3() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Fråga 3:\nPanda Fråga nummer 3";
-
-    // Fråga 3: Pandor bajsar upp till 20 gånger om dagen. (FALSKT)
+    p.textContent = "\n\nPandor har tummar";
 
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
 
     startButton.onclick = loadPandaQ3Correct;
-    secondButton.onclick = loadPandaQ3Wrong;
+    secondButton.onclick = loadPandaQ3Correct;
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 }
 
-/**Sida som visar att användaren har svarat rätt på fråga 2. */
+/**Sida som visar att användaren har svarat rätt på påstående 2. */
 function loadPandaQ3Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -471,44 +465,44 @@ function loadPandaQ3Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar!:\n";
+    p.textContent = "Rätt svar...nästan.\nPandor har ett speciellt ben i sin handled som fungerar som en tumme, så att de kan hålla i t.ex. grenar.";
 
-    startButton.textContent = "Klar!";
+    startButton.textContent = "Klart slut!";
     secondButton.textContent = "Gorillans quiz";
 
         // Pandor bajsar 40 gånger om dagen
 
-    //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
+    //startButton.onclick = länk will WFF
     secondButton.onclick = loadGorilla;
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 }
 
-/**Sida som visar att användaren har svarat fel på fråga 2. */
-function loadPandaQ3Wrong() {
-    const startButton = document.getElementById("btn-1");
-    const secondButton = document.getElementById("btn-2");
-    const p = document.createElement("quizText");
+// /**Sida som visar att användaren har svarat fel på påstående 2. */
+// function loadPandaQ3Wrong() {
+//     const startButton = document.getElementById("btn-1");
+//     const secondButton = document.getElementById("btn-2");
+//     const p = document.createElement("quizText");
 
-    p.classList = "explainText";
+//     p.classList = "explainText";
 
-    document.getElementById("textBox").innerHTML = "";
+//     document.getElementById("textBox").innerHTML = "";
 
-    document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar!";
+//     document.getElementById("textBox").append(p);
+//     p.textContent = "Rätt svar!";
 
-    startButton.textContent = "Klar!";
-    secondButton.textContent = "Gorillans quiz";
-    secondButton.onclick = loadGorilla;
-    //    Pandor bajsar 40 gånger om dagen
+//     startButton.textContent = "Klar!";
+//     secondButton.textContent = "Gorillans quiz";
+//     secondButton.onclick = loadGorilla;
+//     //    Pandor bajsar 40 gånger om dagen
 
-    //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
+//     //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
     
-    // Gör knappen synlig
-    secondButton.classList.remove("secondButton");
+//     // Gör knappen synlig
+//     secondButton.classList.remove("secondButton");
 
-}
+// }
 
 function changeVideo(src) {
     const video = document.querySelector('video');
