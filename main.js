@@ -52,7 +52,7 @@ function loadGorillaOrPanda() {
 }
 
 /** Sida som låter användaren lär sig mer om gorillan */
-function loadGorilla() { /*En knapp med texten "Starta quiz" */
+function loadGorilla() {
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
