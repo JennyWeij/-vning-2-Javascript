@@ -78,6 +78,7 @@ function loadGorillaQ1() {
     const p = document.createElement("quizText");
 
     p.classList = "explainText";
+    changeVideo("./Videos/gorillaVideo.mp4");
 
     document.getElementById("textBox").innerHTML = "";
 
@@ -244,7 +245,7 @@ function loadGorillaQ3Correct() {
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 
-    startButton.onclick = loadPanda;
+    startButton.onclick = loadPandaQ1;
     // secondButton.onclick = window.location.href = 'https://www.wwf.se/stod/ge-en-gava/';
 }
 
@@ -264,7 +265,7 @@ function loadGorillaQ3Wrong() {
     startButton.textContent = "Pandans quiz";
     secondButton.textContent = "Tack och hej!";
 
-    startButton.onclick = loadPanda;
+    startButton.onclick = loadPandaQ1;
     // secondButton.onclick = window.location.href = 'https://www.wwf.se/stod/ge-en-gava/';
 
     // Gör knappen synlig
@@ -324,6 +325,7 @@ function loadPandaQ1() {
     const p = document.createElement("quizText");
 
     p.classList = "explainText";
+    changeVideo("./Videos/pandaVideo.mp4");    
 
     document.getElementById("textBox").innerHTML = "";
 
@@ -485,7 +487,7 @@ function loadPandaQ3Correct() {
     secondButton.textContent = "Gorillans quiz";
 
     // startButton.onclick = location.href; "https://www.wwf.se/stod/ge-en-gava/";
-    secondButton.onclick = loadGorilla;
+    secondButton.onclick = loadGorillaQ1;
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
