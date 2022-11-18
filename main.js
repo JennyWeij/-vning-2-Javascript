@@ -239,13 +239,13 @@ function loadGorillaQ3Correct() {
     p.textContent = "\nRätt svar!\nEn fullvuxen hane kan faktiskt väga \nupp till 200kg"; 
 
     startButton.textContent = "Pandans quiz";
-    secondButton.textContent = "Klar";
+    secondButton.textContent = "Tack och hej!";
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 
     startButton.onclick = loadPanda;
-    // secondButton.onclick = LÄNK TILL WWF
+    // secondButton.onclick = window.location.href = 'https://www.wwf.se/stod/ge-en-gava/';
 }
 
 /**Sida som visar att användaren har svarat fel på påstående 1. */
@@ -262,26 +262,42 @@ function loadGorillaQ3Wrong() {
     p.textContent = "\nDet var tyvärr fel\nEn fullvuxen hane kan faktiskt väga \nupp till 200kg"; 
 
     startButton.textContent = "Pandans quiz";
-    secondButton.textContent = "Klar";
+    secondButton.textContent = "Tack och hej!";
 
     startButton.onclick = loadPanda;
-    secondButton.onclick = webWWF;
-
+    // secondButton.onclick = window.location.href = 'https://www.wwf.se/stod/ge-en-gava/';
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 
 }
 
-function webWWF() {
-    location.href = "https://www.wwf.se/stod/ge-en-gava/";
-}
+// function loadFromGorillaToPanda() {
+//     const rubrikStart = document.getElementById("rubrik");
+//     const textStartsida = document.getElementById("explainText");
+//     const startButton = document.getElementById("btn-1");
+//     const secondButton = document.getElementById("btn-2");
+//     const p = document.createElement("quizText");
+
+//     document.getElementById("explainText").innerHTML = "";
+
+//     changeVideo("./Videos/pandaVideo.mp4");
+
+//     rubrikStart.textContent = "Panda";
+//     textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
+    
+//     startButton.textContent = "Starta quiz";
+//     startButton.onclick = loadPandaQ1;
+
+//     // Gör knappen osynlig
+//     secondButton.classList.add("secondButton");
+// }
 
 /*                        PANDA DELEN       */
 
 
 /*Sida som låter användaren lär sig mer om pandan */
-function loadPanda() { /*En knapp med texten "Starta quiz" */
+function loadPanda() { 
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
@@ -379,8 +395,6 @@ function loadPandaQ2() {
     document.getElementById("textBox").append(p);
     p.textContent = "\n\nPandor kan simma";
 
-    // påstående: . (SANT)
-
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
     startButton.onclick = loadPandaQ2Correct;
@@ -467,42 +481,15 @@ function loadPandaQ3Correct() {
     document.getElementById("textBox").append(p);
     p.textContent = "Rätt svar...nästan.\nPandor har ett speciellt ben i sin handled som fungerar som en tumme, så att de kan hålla i t.ex. grenar.";
 
-    startButton.textContent = "Klart slut!";
+    startButton.textContent = "Tack och hej!";
     secondButton.textContent = "Gorillans quiz";
 
-        // Pandor bajsar 40 gånger om dagen
-
-    //startButton.onclick = länk will WFF
+    // startButton.onclick = location.href; "https://www.wwf.se/stod/ge-en-gava/";
     secondButton.onclick = loadGorilla;
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 }
-
-// /**Sida som visar att användaren har svarat fel på påstående 2. */
-// function loadPandaQ3Wrong() {
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
-//     const p = document.createElement("quizText");
-
-//     p.classList = "explainText";
-
-//     document.getElementById("textBox").innerHTML = "";
-
-//     document.getElementById("textBox").append(p);
-//     p.textContent = "Rätt svar!";
-
-//     startButton.textContent = "Klar!";
-//     secondButton.textContent = "Gorillans quiz";
-//     secondButton.onclick = loadGorilla;
-//     //    Pandor bajsar 40 gånger om dagen
-
-//     //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
-    
-//     // Gör knappen synlig
-//     secondButton.classList.remove("secondButton");
-
-// }
 
 function changeVideo(src) {
     const video = document.querySelector('video');
