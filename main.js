@@ -231,9 +231,13 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
 function loadPandaQ1() { /*TVÅ knappar med texten "Sant" & "Falskt" */
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-    document.body.append(p);
+
+    document.getElementById("textBox").append(p);
     p.textContent = "Äter en panda 30 kilo bambu/dag?";
 
     /*lägg till bild på panda i bakgrunden*/
@@ -253,9 +257,17 @@ function loadPandaQ1() { /*TVÅ knappar med texten "Sant" & "Falskt" */
 function loadPandaQ1Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Rätt! Bravo! Pandor spenderar faktiskt 10-16 timmar/dag på att äta och sover upp till 12 timmar/dag.";
 
     startButton.textContent = "Nästa fråga";
-    startButton.onclick = loadQuizQ2Panda;
+    startButton.onclick = loadPandaQ2;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -265,6 +277,14 @@ function loadPandaQ1Correct() {
 function loadPandaQ1Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Det var tyvärr fel svar. Pandor spenderar faktiskt 10-16 timmar/dag på att äta och sover upp till 12 timmar/dag.";
     
     startButton.textContent = "Nästa fråga";
     startButton.onclick = loadPandaQ2;
@@ -278,10 +298,15 @@ function loadPandaQ1Wrong() {
 function loadPandaQ2() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
 
-    p.textContent = "Äter en panda 30 kilo bambu/dag?";
+    p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Panda Fråga nummer 2";
+    
     // document.body.append(p);
 
     // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
@@ -304,10 +329,17 @@ function loadPandaQ2() {
 function loadPandaQ2Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
 
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Rätt svar!";
+    
     startButton.textContent = "Nästa fråga";
-    startButton.onclick = loadQuizQ3Panda;
-
+    startButton.onclick = loadPandaQ3;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -317,7 +349,15 @@ function loadPandaQ2Correct() {
 function loadPandaQ2Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
-    
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Det var tyvärr fel svar. Pandor spenderar faktiskt 10-16 timmar/dag på att äta och sover upp till 12 timmar/dag.";
+
     startButton.textContent = "Nästa fråga";
     startButton.onclick = loadPandaQ3;
     
