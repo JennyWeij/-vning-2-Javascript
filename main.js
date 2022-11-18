@@ -104,6 +104,7 @@ function loadGorillaQ1Correct() {
     const secondButton = document.getElementById("btn-2");
 
     startButton.textContent = "Nästa fråga";
+    startButton.onclick = loadGorillaQ2;
 
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -122,67 +123,88 @@ function loadGorillaQ1Wrong() {
 
 }
 
-// function loadGorillaQ2() {
+function loadGorillaQ2() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
 
-//     // Fråga 2: Finns det mer än 1000 gorillor i världen?;
-// }
-
-// /**Sida som visar att användaren har svarat rätt på fråga 1. */
-// function loadGorillaQ2Correct() {
-//     const textStartsida = document.getElementById("explainText");
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
-
-//     startButton.textContent = "Nästa fråga";
-
-//     // Gör knappen osynlig
-//     secondButton.classList.add("secondButton");
-// }
-
-// /**Sida som visar att användaren har svarat fel på fråga 1. */
-// function loadGorillaQ2Wrong() {
-//     const textStartsida = document.getElementById("explainText");
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
+    document.getElementById("textBox").innerHTML = "";
     
-//     startButton.textContent = "Nästa fråga";
+    /*lägg till bild på gorilla i bakgrunden*/
+     // Fråga 1: Finns det mer än 1000 gorillor i världen?; 
+
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
+
+    startButton.textContent = "Sant";
+    secondButton.textContent = "Falskt";
+
+    startButton.onclick = loadGorillaQ2Correct;
+    secondButton.onclick = loadGorillaQ2Wrong;
+    // Fråga 2: Finns det mer än 1000 gorillor i världen?;
+}
+
+/**Sida som visar att användaren har svarat rätt på fråga 1. */
+function loadGorillaQ2Correct() {
+    const textStartsida = document.getElementById("explainText");
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+
+    startButton.textContent = "Nästa fråga";
+
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+}
+
+/**Sida som visar att användaren har svarat fel på fråga 1. */
+function loadGorillaQ2Wrong() {
+    const textStartsida = document.getElementById("explainText");
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
     
-//     // Gör knappen osynlig
-//     secondButton.classList.add("secondButton");
-
-// }
-
-// function loadGorillaQ3() {
-    // const startButton = document.getElementById("btn-1");
-    // const secondButton = document.getElementById("btn-2");
-
-    // document.getElementById("textBox").innerHTML = "";
-//     // Fråga 2: Finns det mer än 1000 gorillor i världen?;
-// }
-
-// /**Sida som visar att användaren har svarat rätt på fråga 1. */
-// function loadGorillaQ3Correct() {
-//     const textStartsida = document.getElementById("explainText");
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
-
-//     startButton.textContent = "Nästa fråga";
-
-//     // Gör knappen osynlig
-//     secondButton.classList.add("secondButton");
-// }
-
-// /**Sida som visar att användaren har svarat fel på fråga 1. */
-// function loadGorillaQ3Wrong() {
-//     const textStartsida = document.getElementById("explainText");
-//     const startButton = document.getElementById("btn-1");
+    startButton.textContent = "Nästa fråga";
+    startButton.onclick = loadGorillaQ3;
     
-//     startButton.textContent = "Nästa fråga";
-    
-//     // Gör knappen osynlig
-//     secondButton.classList.add("secondButton");
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
 
-// }
+}
+
+function loadGorillaQ3() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+
+    document.getElementById("textBox").innerHTML = "";
+    // Fråga 2: Finns det mer än 1000 gorillor i världen?;
+}
+
+/**Sida som visar att användaren har svarat rätt på fråga 1. */
+function loadGorillaQ3Correct() {
+    const textStartsida = document.getElementById("explainText");
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
+
+    startButton.textContent = "Gör pandans quiz";
+    secondButton.textContent = "Klar";
+
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+}
+
+/**Sida som visar att användaren har svarat fel på fråga 1. */
+function loadGorillaQ3Wrong() {
+    const textStartsida = document.getElementById("explainText");
+    const startButton = document.getElementById("btn-1");
+    
+    startButton.textContent = "Gör pandans quiz";
+    secondButton.textContent = "Klar";
+    
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+
+}
+
+/*                        PANDA DELEN       */
+
 
 /*Sida som låter användaren lär sig mer om pandan */
 function loadPanda() { /*En knapp med texten "Starta quiz" */
@@ -210,14 +232,9 @@ function loadPandaQ1() { /*TVÅ knappar med texten "Sant" & "Falskt" */
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
 
-    // p.textContent = "Äter en panda 30 kilo bambu/dag?";
-
-    //Byt till bild istället för video
-
-    // document.getElementById("textBox").innerHTML = "";
-    // document.body.append(p);
-
     document.getElementById("textBox").innerHTML = "";
+    document.body.append(p);
+    p.textContent = "Äter en panda 30 kilo bambu/dag?";
 
     /*lägg till bild på panda i bakgrunden*/
 
@@ -250,7 +267,7 @@ function loadPandaQ1Wrong() {
     const secondButton = document.getElementById("btn-2");
     
     startButton.textContent = "Nästa fråga";
-    startButton.onclick = loadQuizQ2Panda;
+    startButton.onclick = loadPandaQ2;
     
     // Gör knappen osynlig
     secondButton.classList.add("secondButton");
@@ -276,98 +293,100 @@ function loadPandaQ2() {
 
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
+    startButton.onclick = loadPandaQ2Correct;
+    secondButton.onclick = loadPandaQ2Wrong;
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 }
 
-// /**Sida som visar att användaren har svarat rätt på fråga 2. */
-// function loadPandaQ2Correct() {
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
+/**Sida som visar att användaren har svarat rätt på fråga 2. */
+function loadPandaQ2Correct() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
 
-//     startButton.textContent = "Nästa fråga";
-//     startButton.onclick = loadQuizQ3Panda;
+    startButton.textContent = "Nästa fråga";
+    startButton.onclick = loadQuizQ3Panda;
 
 
-//     // Gör knappen osynlig
-//     secondButton.classList.add("secondButton");
-// }
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+}
 
-// /**Sida som visar att användaren har svarat fel på fråga 2. */
-// function loadPandaQ2Wrong() {
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
+/**Sida som visar att användaren har svarat fel på fråga 2. */
+function loadPandaQ2Wrong() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
     
-//     startButton.textContent = "Nästa fråga";
-//     startButton.onclick = loadQuizQ3Panda;
+    startButton.textContent = "Nästa fråga";
+    startButton.onclick = loadPandaQ3;
     
-//     // Gör knappen osynlig
-//     secondButton.classList.add("secondButton");
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
 
-// }
+}
 
-// /**Sida som visar fråga 3 för användaren. */
-// function loadPandaQ3() {
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
+/**Sida som visar fråga 3 för användaren. */
+function loadPandaQ3() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
 
-//     p.textContent = "Äter en panda 30 kilo bambu/dag?";
+    p.textContent = "Äter en panda 30 kilo bambu/dag?";
 
-//     document.getElementById("textBox").innerHTML = "";
-//     document.body.append(p);
+    document.getElementById("textBox").innerHTML = "";
+    document.body.append(p);
 
-//     Fråga 3: Pandor bajsar upp till 20 gånger om dagen. (FALSKT)
+    // Fråga 3: Pandor bajsar upp till 20 gånger om dagen. (FALSKT)
 
-//     // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
-//     // div.append(rubrikStart, textStartsida, startButton, secondButton);
+    // div.innerHTML = ""; lägg till p elementet och boxen på nedan sätt
+    // div.append(rubrikStart, textStartsida, startButton, secondButton);
 
-//     /*lägg till bild på gorilla i bakgrunden*/
+    /*lägg till bild på gorilla i bakgrunden*/
 
-//     startButton.textContent = "Sant";
-//     secondButton.textContent = "Falskt";
+    startButton.textContent = "Sant";
+    secondButton.textContent = "Falskt";
 
-//     startButton.onclick = loadPandaQuizQ3Correct;
-//     secondButton.onclick = loadPandaQuizQ3Wrong;
+    startButton.onclick = loadPandaQ3Correct;
+    secondButton.onclick = loadPandaQ3Wrong;
 
-//     // Gör knappen synlig
-//     secondButton.classList.remove("secondButton");
-// }
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
+}
 
-// /**Sida som visar att användaren har svarat rätt på fråga 2. */
-// function loadPandaQ3Correct() {
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
+/**Sida som visar att användaren har svarat rätt på fråga 2. */
+function loadPandaQ3Correct() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
 
-//     startButton.textContent = "Klar!";
-//     secondButton.textContent = "Gör gorillans quiz";
+    startButton.textContent = "Klar!";
+    secondButton.textContent = "Gör gorillans quiz";
 
         // Pandor bajsar 40 gånger om dagen
 
-//     //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
-//     secondButton.onclick = loadGorilla;
+    //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
+    secondButton.onclick = loadGorilla;
 
-//     // Gör knappen osynlig
-//     secondButton.classList.add("secondButton");
-// }
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
+}
 
-// /**Sida som visar att användaren har svarat fel på fråga 2. */
-// function loadPandaQ3Wrong() {
-//     const startButton = document.getElementById("btn-1");
-//     const secondButton = document.getElementById("btn-2");
+/**Sida som visar att användaren har svarat fel på fråga 2. */
+function loadPandaQ3Wrong() {
+    const startButton = document.getElementById("btn-1");
+    const secondButton = document.getElementById("btn-2");
 
-       // Pandor bajsar 40 gånger om dagen
+    //    Pandor bajsar 40 gånger om dagen
     
-//     startButton.textContent = "Klar!";
-//     secondButton.textContent = "Gör gorillans quiz";
+    startButton.textContent = "Klar!";
+    secondButton.textContent = "Gör gorillans quiz";
 
-//     //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
-//     secondButton.onclick = loadGorilla;
+    //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
+    secondButton.onclick = loadGorilla;
 
-//     // Gör knappen osynlig
-//     secondButton.classList.add("secondButton");
+    // Gör knappen osynlig
+    secondButton.classList.add("secondButton");
 
-// }
+}
 
 function changeVideo(src) {
     const video = document.querySelector('video');
