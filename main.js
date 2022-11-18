@@ -16,7 +16,7 @@ function loadStartPage() { /*En knapp med texten "Nu kör vi" */
     const startButton = document.getElementById("btn-1");
 
     rubrikStart.textContent = "Välkommen till PlanetEn!";
-    textStartsida.textContent = "Här får du lära dig mer om två stycken spännande djur. Fyll i ditt namn och klicka på knappen så kör vi igång!";
+    textStartsida.textContent = "Här får du lära dig mer om två stycken spännande djur. \nFyll i ditt namn och klicka på knappen så kör vi igång!";
     
     startButton.textContent = "Nu kör vi!";
     startButton.onclick = loadGorillaOrPanda;
@@ -47,7 +47,7 @@ function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
     document.getElementById("myInputField").style.display = "none";
 
     rubrikStart.textContent = "Välkommen " + userName + "!"; 
-    textStartsida.textContent = "Du ska få lära dig mer om pandor och gorillor. Vilken av dem vill du börja lära dig om?";
+    textStartsida.textContent = "Du ska få lära dig mer om pandor och gorillor. \nVilken av dem vill du börja lära dig om?";
     
     startButton.textContent = "Gorilla";
     startButton.onclick = loadGorilla;
@@ -66,7 +66,7 @@ function loadGorilla() { /*En knapp med texten "Starta quiz" */
     changeVideo("./Videos/gorillaVideo.mp4");
 
     rubrikStart.textContent = "Gorillan";
-    textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om gorillan kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om gorillan kommer du nu att få göra en quiz. \nDu kommer få ett påstående och väljer antingen Sant eller Falskt";
     
     startButton.textContent = "Starta quiz";
     startButton.onclick = loadGorillaQ1;
@@ -87,7 +87,7 @@ function loadGorillaQ1() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det finns det mer än 2000 gorillor som lever i det vilda";
+    p.textContent = "Fråga 1:\nDet finns det mer än 2000 gorillor som lever i det vilda";
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
@@ -155,7 +155,7 @@ function loadGorillaQ2() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Fråga 2"; 
+    p.textContent = "Fråga 2:\n"; 
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
@@ -217,7 +217,7 @@ function loadGorillaQ3() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Fråga 2"; 
+    p.textContent = "Fråga 3:\n"; 
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
@@ -269,10 +269,16 @@ function loadGorillaQ3Wrong() {
     secondButton.textContent = "Klar";
 
     startButton.onclick = loadPanda;
-    
+    secondButton.onclick = webWWF;
+
+
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
 
+}
+
+function webWWF() {
+    location.href = "https://www.wwf.se/stod/ge-en-gava/";
 }
 
 /*                        PANDA DELEN       */
@@ -288,7 +294,7 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
     changeVideo("./Videos/pandaVideo.mp4");
     
     rubrikStart.textContent = "Pandan";
-    textStartsida.textContent = "För att lära dig mer om pandan kommer du nu att få göra en quiz. Du kommer få ett påstående och väljer antingen Sant eller Falskt";
+    textStartsida.textContent = "För att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer få ett påstående och väljer antingen \nSant eller Falskt";
 
     startButton.textContent = "Starta quiz";
 
@@ -310,7 +316,7 @@ function loadPandaQ1() { /*TVÅ knappar med texten "Sant" & "Falskt" */
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Äter en panda 30 kilo bambu/dag?";
+    p.textContent = "Fråga 1:\nÄter en panda 30 kilo bambu/dag?";
 
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
@@ -375,7 +381,7 @@ function loadPandaQ2() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Panda Fråga nummer 2";
+    p.textContent = "Fråga 2:\nPanda Fråga nummer 2";
 
     // Fråga 2: Pandor kan klättra i träd, och de kan simma. (SANT)
 
@@ -440,7 +446,7 @@ function loadPandaQ3() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Panda Fråga nummer 3";
+    p.textContent = "Fråga 3:\nPanda Fråga nummer 3";
 
     // Fråga 3: Pandor bajsar upp till 20 gånger om dagen. (FALSKT)
 
