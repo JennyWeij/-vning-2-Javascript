@@ -30,7 +30,7 @@ function loadStartPage() { /*En knapp med texten "Nu kör vi" */
 
 /** Sida som välkomnar användaren med tidigare ifyllt namn, sidan
 låter användaren välja att börja lära sig mer om gorillan eller pandan */
-function loadGorillaOrPanda() { /*Två knappar med texten "Gorilla" & "Panda" */
+function loadGorillaOrPanda() { 
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
@@ -306,7 +306,7 @@ function loadPanda() { /*En knapp med texten "Starta quiz" */
 }
 
 /**Sida som låter användaren göra en quiz, med tre frågor, om pandor */
-function loadPandaQ1() { /*TVÅ knappar med texten "Sant" & "Falskt" */
+function loadPandaQ1() { 
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
     const p = document.createElement("quizText");
