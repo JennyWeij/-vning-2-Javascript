@@ -155,9 +155,7 @@ function loadGorillaQ2() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Fråga 2";
-    
-     // Fråga 1: Finns det mer än 1000 gorillor i världen?; 
+    p.textContent = "Fråga 2"; 
 
     // Gör knappen synlig
     secondButton.classList.remove("secondButton");
@@ -167,14 +165,20 @@ function loadGorillaQ2() {
 
     startButton.onclick = loadGorillaQ2Correct;
     secondButton.onclick = loadGorillaQ2Wrong;
-    // Fråga 2: Finns det mer än 1000 gorillor i världen?;
 }
 
 /**Sida som visar att användaren har svarat rätt på fråga 1. */
 function loadGorillaQ2Correct() {
-    const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Rätt svar"; 
 
     startButton.textContent = "Nästa fråga";
 
@@ -184,9 +188,16 @@ function loadGorillaQ2Correct() {
 
 /**Sida som visar att användaren har svarat fel på fråga 1. */
 function loadGorillaQ2Wrong() {
-    const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Det var tyvärr fel svar"; 
     
     startButton.textContent = "Nästa fråga";
     startButton.onclick = loadGorillaQ3;
@@ -199,34 +210,68 @@ function loadGorillaQ2Wrong() {
 function loadGorillaQ3() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-    // Fråga 2: Finns det mer än 1000 gorillor i världen?;
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Fråga 2"; 
+
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
+
+    startButton.textContent = "Sant";
+    secondButton.textContent = "Falskt";
+
+    startButton.onclick = loadGorillaQ3Correct;
+    secondButton.onclick = loadGorillaQ3Wrong;
 }
 
 /**Sida som visar att användaren har svarat rätt på fråga 1. */
 function loadGorillaQ3Correct() {
-    const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
 
-    startButton.textContent = "Gör pandans quiz";
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Rätt! Bravo"; 
+
+    startButton.textContent = "Pandans quiz";
     secondButton.textContent = "Klar";
 
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
+
+    startButton.onclick = loadPanda;
+    // secondButton.onclick = LÄNK TILL WWF
 }
 
 /**Sida som visar att användaren har svarat fel på fråga 1. */
 function loadGorillaQ3Wrong() {
-    const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
-    
-    startButton.textContent = "Gör pandans quiz";
+    const secondButton = document.getElementById("btn-2");
+    const p = document.createElement("quizText");
+
+    p.classList = "explainText";
+
+    document.getElementById("textBox").innerHTML = "";
+
+    document.getElementById("textBox").append(p);
+    p.textContent = "Det var tyvärr fel"; 
+
+    startButton.textContent = "Pandans quiz";
     secondButton.textContent = "Klar";
+
+    startButton.onclick = loadPanda;
     
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
 
 }
 
@@ -423,15 +468,15 @@ function loadPandaQ3Correct() {
     p.textContent = "Rätt svar!";
 
     startButton.textContent = "Klar!";
-    secondButton.textContent = "Gör gorillans quiz";
+    secondButton.textContent = "Gorillans quiz";
 
         // Pandor bajsar 40 gånger om dagen
 
     //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
     secondButton.onclick = loadGorilla;
 
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
 }
 
 /**Sida som visar att användaren har svarat fel på fråga 2. */
@@ -448,15 +493,14 @@ function loadPandaQ3Wrong() {
     p.textContent = "Rätt svar!";
 
     startButton.textContent = "Klar!";
-    secondButton.textContent = "Gör gorillans quiz";
+    secondButton.textContent = "Gorillans quiz";
     secondButton.onclick = loadGorilla;
     //    Pandor bajsar 40 gånger om dagen
 
     //startButton.onclick = loadPandaQuizQ3Correct; TACK OCH GODNATT, länk will WFF
     
-
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
+    // Gör knappen synlig
+    secondButton.classList.remove("secondButton");
 
 }
 
