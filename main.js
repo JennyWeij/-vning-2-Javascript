@@ -61,7 +61,7 @@ function loadGorilla() {
     changeVideo("./Videos/gorillaVideo.mp4");
 
     rubrikStart.textContent = "Gorillan";
-    textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
     
     startButton.textContent = "Starta quiz";
     startButton.onclick = loadGorillaQ1;
@@ -129,7 +129,7 @@ function loadGorillaQ1Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel svar. \nDet finns bara runt 1100 gorillor i det vilda. Gorillan delas in i två arter; \nvästlig och östlig gorilla.";
+    p.textContent = "Det var tyvärr fel svar, " + userName + ". \nDet finns bara runt 1100 gorillor i det vilda. Gorillan delas in i två arter; \nvästlig och östlig gorilla.";
 
     startButton.textContent = "Nästa påstående";
     startButton.onclick = loadGorillaQ2;
@@ -174,7 +174,7 @@ function loadGorillaQ2Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar!\n Eftersom människor och gorillor delar\n 98% DNA, är gorillor mottagliga för samma sjukdomar som vi människor."; 
+    p.textContent = "Rätt svar, " + userName + "!\n Eftersom människor och gorillor delar\n 98% DNA, är gorillor mottagliga för samma sjukdomar som vi människor."; 
 
     startButton.textContent = "Nästa";
     startButton.onclick = loadGorillaQ3;
@@ -194,7 +194,7 @@ function loadGorillaQ2Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Tyvärr, fel svar.\nEftersom människor och gorillor delar\n 98% DNA, är gorillor mottagliga för samma sjukdomar som vi människor.";
+    p.textContent = "Tyvärr, fel svar " + userName + ".\nEftersom människor och gorillor delar\n 98% DNA, är gorillor mottagliga för samma sjukdomar som vi människor.";
     
     startButton.textContent = "Nästa";
     startButton.onclick = loadGorillaQ3;
@@ -237,7 +237,7 @@ function loadGorillaQ3Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "\nRätt svar!\nEn fullvuxen hane kan faktiskt väga \nupp till 200kg"; 
+    p.textContent = "Rätt svar!\nEn fullvuxen hane kan faktiskt väga \nupp till 200 kg. \nBra jobbat, " + userName + "!"; 
 
     startButton.textContent = "Pandans quiz";
     secondButton.textContent = "Tack och hej!";
@@ -260,7 +260,7 @@ function loadGorillaQ3Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "\nDet var tyvärr fel\nEn fullvuxen hane kan faktiskt väga \nupp till 200kg"; 
+    p.textContent = "Det var tyvärr fel, " + userName + ".\nEn fullvuxen hane kan faktiskt väga \nupp till 200 kg. \nBra jobbat, " + userName + "!"; 
 
     startButton.textContent = "Pandans quiz";
     secondButton.textContent = "Tack och hej!";
@@ -307,7 +307,7 @@ function loadPanda() {
     changeVideo("./Videos/pandaVideo.mp4");
     
     rubrikStart.textContent = "Pandan";
-    textStartsida.textContent = "Okej " + userName + ", för att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
 
     startButton.textContent = "Starta quiz";
 
@@ -374,7 +374,7 @@ function loadPandaQ1Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel svar.\nPandor spenderar faktiskt 10-16 timmar/dag \npå att äta och sover upp till \n12 timmar/dag.";
+    p.textContent = "Det var tyvärr fel svar, " + userName + "!\nPandor spenderar faktiskt 10-16 timmar/dag \npå att äta och sover upp till \n12 timmar/dag.";
     
     startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ2;
@@ -417,7 +417,7 @@ function loadPandaQ2Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar!\nPandor kan simma och klättra i träd. \nEn panda som väger 130 kilo kan utan problem simma och klättra.";
+    p.textContent = "Rätt svar, " + userName + "!\nPandor kan simma och klättra i träd. \nEn panda som väger 130 kilo kan utan problem simma och klättra.";
     
     startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ3;
@@ -437,7 +437,7 @@ function loadPandaQ2Wrong() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Det var tyvärr fel svar.\nPandor kan både simma och klättra i träd. \nEn panda som väger 130 kilo kan utan problem simma och klättra.";
+    p.textContent = "Det var tyvärr fel svar, " + userName + ".\nPandor kan både simma och klättra i träd. \nEn panda som väger 130 kilo kan utan problem simma och klättra.";
 
     startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ3;
@@ -481,7 +481,7 @@ function loadPandaQ3Correct() {
     document.getElementById("textBox").innerHTML = "";
 
     document.getElementById("textBox").append(p);
-    p.textContent = "Rätt svar...nästan.\nPandor har ett speciellt ben i sin handled som fungerar som en tumme, så att de kan hålla i t.ex. grenar.";
+    p.textContent = "Rätt svar...nästan.\nPandor har ett speciellt ben i sin handled som fungerar som en tumme, så att de kan hålla i t.ex. grenar. Bra jobbat, " + userName + "!";
 
     startButton.textContent = "Tack och hej!";
     secondButton.textContent = "Gorillans quiz";
