@@ -1,14 +1,14 @@
 window.addEventListener("DOMContentLoaded", main);
 
-/**Variabel som sparar namnet från inputfältet */
+/**Variabel som sparar namnet från startsidans inputfält */
 let userName = "";
 
-/*kom ihåg att fördröja texten och knappen och låt videon spela ett par sekunder först*/ 
 function main() {
     loadStartPage();
 }
 
-/** Syftet med funktionenStartsida som välkomnar användaren och ber denne fyll i sitt namn */
+/** Startsida som välkomnar användaren och berättar vad som kommer att hända, 
+ * ber även denne fyll i sitt namn */
 function loadStartPage() { 
     const rubrikStart = document.getElementById("rubrik");
     const myInputField = document.getElementById("userName");
@@ -36,14 +36,13 @@ function loadGorillaOrPanda() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
     
- // Gör knappen synlig
-    secondButton.classList.remove("secondButton");
-
+    
     document.getElementById("myInputField").style.display = "none";
-
+    
     rubrikStart.textContent = "Välkommen " + userName + "!"; 
     textStartsida.textContent = "Du ska få lära dig mer om två mycket spännande djur;\n pandor och gorillor. \nVilken av dem vill du börja lära dig om?";
     
+    secondButton.classList.remove("secondButton");
     startButton.textContent = "Gorilla";
     startButton.onclick = loadGorilla;
     secondButton.textContent = "Panda";
@@ -63,11 +62,9 @@ function loadGorilla() {
     rubrikStart.textContent = "Gorillan";
     textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om gorillan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
     
+    secondButton.classList.add("secondButton");
     startButton.textContent = "Starta quiz";
     startButton.onclick = loadGorillaQ1;
-
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
 
 }
 
@@ -81,16 +78,12 @@ function loadGorillaQ1() {
     changeVideo("./Videos/gorillaVideo.mp4");
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "\nDet finns mer än 2000 bergsgorillor \nsom lever i det vilda";
 
-    // Gör knappen synlig
     secondButton.classList.remove("secondButton");
-
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
-
     startButton.onclick = loadGorillaQ1Wrong;
     secondButton.onclick = loadGorillaQ1Correct;
 
@@ -106,15 +99,12 @@ function loadGorillaQ1Correct() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Rätt svar, " + userName + "! Det finns bara runt 1100 bergsgorillor i det vilda. Gorillan delas in i två arter; västlig och östlig gorilla med bergsgorillan som underart.";
-
+    
+    secondButton.classList.add("secondButton");
     startButton.textContent = "Nästa";
     startButton.onclick = loadGorillaQ2;
-
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
 }
 
 /**Sida som visar att användaren har svarat fel på påstående 1. */
@@ -127,17 +117,13 @@ function loadGorillaQ1Wrong() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Tyvärr, fel svar, " + userName + ". Det finns bara runt 1100 bergsgorillor i det vilda. Gorillan delas in i två arter; västlig och östlig gorilla med bergsgorillan som underart.";
 
+    secondButton.classList.add("secondButton");
     startButton.textContent = "Nästa påstående";
     startButton.onclick = loadGorillaQ2;
-    
     startButton.textContent = "Nästa";
-    
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
 
 }
 
@@ -149,16 +135,12 @@ function loadGorillaQ2() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "\nGorillor kan drabbas av samma sjukdomar \nsom vi människor"; 
 
-    // Gör knappen synlig
     secondButton.classList.remove("secondButton");
-
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
-
     startButton.onclick = loadGorillaQ2Correct;
     secondButton.onclick = loadGorillaQ2Wrong;
 }
@@ -172,15 +154,12 @@ function loadGorillaQ2Correct() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Rätt svar, " + userName + "!\n Eftersom människor och gorillor delar\n 98% DNA, är gorillor mottagliga för samma sjukdomar som vi människor."; 
 
+    secondButton.classList.add("secondButton");
     startButton.textContent = "Nästa";
     startButton.onclick = loadGorillaQ3;
-
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
 }
 
 /**Sida som visar att användaren har svarat fel på påstående 1. */
@@ -192,15 +171,12 @@ function loadGorillaQ2Wrong() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Tyvärr, fel svar " + userName + ".\nEftersom människor och gorillor delar\n 98% DNA, är gorillor mottagliga för samma sjukdomar som vi människor.";
     
+    secondButton.classList.add("secondButton");
     startButton.textContent = "Nästa";
     startButton.onclick = loadGorillaQ3;
-    
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
 
 }
 
@@ -212,16 +188,12 @@ function loadGorillaQ3() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "\nEn fullvuxen gorillahane kan väga upp till\n 150 kilo"; 
 
-    // Gör knappen synlig
     secondButton.classList.remove("secondButton");
-
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
-
     startButton.onclick = loadGorillaQ3Wrong;
     secondButton.onclick = loadGorillaQ3Correct;
 }
@@ -235,18 +207,14 @@ function loadGorillaQ3Correct() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Rätt svar!\nEn fullvuxen hane kan faktiskt väga \nända upp till 200 kg. \nBra jobbat, " + userName + "!"; 
 
-    startButton.textContent = "Pandans quiz";
-    secondButton.textContent = "Tack och hej!";
-
-    // Gör knappen synlig
     secondButton.classList.remove("secondButton");
-
-    startButton.onclick = loadPandaQ1;
-    secondButton.onclick = window.open("https://www.wwf.se/stod/ge-en-gava/");
+    startButton.textContent = "En gång till";
+    secondButton.textContent = "Pandans quiz";
+    startButton.onclick = loadGorillaQ1;
+    secondButton.onclick = loadPandaQ1;
 }
 
 /**Sida som visar att användaren har svarat fel på påstående 1. */
@@ -258,23 +226,18 @@ function loadGorillaQ3Wrong() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Det var tyvärr fel svar, " + userName + ".\nEn fullvuxen hane kan faktiskt väga \nända upp till 200 kg. \nBra jobbat, " + userName + "!"; 
 
-    startButton.textContent = "Pandans quiz";
-    secondButton.textContent = "Tack och hej!";
-
-    startButton.onclick = loadPandaQ1;
-    // secondButton.onclick = window.location.href = 'https://www.wwf.se/stod/ge-en-gava/';
-
-    // Gör knappen synlig
     secondButton.classList.remove("secondButton");
+    startButton.textContent = "En gång till";
+    secondButton.textContent = "Pandans quiz";
+    startButton.onclick = loadGorillaQ1;
+    secondButton.onclick = loadPandaQ1;
 
 }
 
-/**        PANDA-DELEN     */
-
+/**PANDA-DELEN*/
 
 /*Sida som låter användaren lär sig mer om pandan */
 function loadPanda() { 
@@ -288,12 +251,9 @@ function loadPanda() {
     rubrikStart.textContent = "Pandan";
     textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
 
-    startButton.textContent = "Starta quiz";
-
-    startButton.onclick = loadPandaQ1;
-    
-        // Gör knappen osynlig
     secondButton.classList.add("secondButton");
+    startButton.textContent = "Starta quiz";
+    startButton.onclick = loadPandaQ1;
     
 }
 
@@ -307,18 +267,14 @@ function loadPandaQ1() {
     changeVideo("./Videos/pandaVideo.mp4");    
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "\n\nEn panda äter 30 kilo bambu/dag";
-
+    
+    secondButton.classList.remove("secondButton");
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
-
     startButton.onclick = loadPandaQ1Correct;
     secondButton.onclick = loadPandaQ1Wrong;
-
-    // Gör knappen synlig
-    secondButton.classList.remove("secondButton");
 
 }
 
@@ -331,15 +287,12 @@ function loadPandaQ1Correct() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Rätt svar, " + userName + "!\nPandor spenderar faktiskt 10-16 timmar/dag \npå att äta och sover upp till \n12 timmar/dag.";
 
+    secondButton.classList.add("secondButton");
     startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ2;
-
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
 }
 
 /**Sida som visar att användaren har svarat fel på påstående 1. */
@@ -351,15 +304,12 @@ function loadPandaQ1Wrong() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Det var tyvärr fel svar, " + userName + "!\nPandor spenderar faktiskt 10-16 timmar/dag \npå att äta och sover upp till \n12 timmar/dag.";
     
+    secondButton.classList.add("secondButton");
     startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ2;
-    
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
 
 }
 
@@ -372,17 +322,14 @@ function loadPandaQ2() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "\n\nPandor kan simma";
 
+    secondButton.classList.remove("secondButton");
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
     startButton.onclick = loadPandaQ2Correct;
     secondButton.onclick = loadPandaQ2Wrong;
-
-    // Gör knappen synlig
-    secondButton.classList.remove("secondButton");
 }
 
 /**Sida som visar att användaren har svarat rätt på påstående 2. */
@@ -394,15 +341,12 @@ function loadPandaQ2Correct() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Rätt svar, " + userName + "!\nPandor kan simma och klättra i träd. \nEn panda som väger 130 kilo kan utan problem simma och klättra.";
     
+    secondButton.classList.add("secondButton");
     startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ3;
-
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
 }
 
 /**Sida som visar att användaren har svarat fel på påstående 2. */
@@ -418,11 +362,9 @@ function loadPandaQ2Wrong() {
     document.getElementById("textBox").append(p);
     p.textContent = "Det var tyvärr fel svar, " + userName + ".\nPandor kan både simma och klättra i träd. \nEn panda som väger 130 kilo kan utan problem simma och klättra.";
 
+    secondButton.classList.add("secondButton");
     startButton.textContent = "Nästa";
     startButton.onclick = loadPandaQ3;
-    
-    // Gör knappen osynlig
-    secondButton.classList.add("secondButton");
 
 }
 
@@ -435,18 +377,14 @@ function loadPandaQ3() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "\n\nPandor har tummar";
 
+    secondButton.classList.remove("secondButton");
     startButton.textContent = "Sant";
     secondButton.textContent = "Falskt";
-
     startButton.onclick = loadPandaQ3Correct;
     secondButton.onclick = loadPandaQ3Correct;
-
-    // Gör knappen synlig
-    secondButton.classList.remove("secondButton");
 }
 
 /**Sida som visar att användaren har svarat rätt på påstående 2. */
@@ -458,20 +396,17 @@ function loadPandaQ3Correct() {
     p.classList = "explainText";
 
     document.getElementById("textBox").innerHTML = "";
-
     document.getElementById("textBox").append(p);
     p.textContent = "Rätt svar...nästan.\nPandor har ett speciellt ben i sin handled som fungerar som en tumme, så att de kan hålla i t.ex. grenar. Bra jobbat, " + userName + "!";
 
-    startButton.textContent = "Tack och hej!";
-    secondButton.textContent = "Gorillans quiz";
-
-    startButton.onclick = window.open("https://www.wwf.se/stod/ge-en-gava/");
-    secondButton.onclick = loadGorillaQ1;
-
-    // Gör knappen synlig
     secondButton.classList.remove("secondButton");
+    startButton.textContent = "En gång till";
+    secondButton.textContent = "Gorillans quiz";
+    startButton.onclick = loadPandaQ1;
+    secondButton.onclick = loadGorillaQ1;
 }
 
+/**Funktion som ändrar sidans bakgrundsvideo */
 function changeVideo(src) {
     const video = document.querySelector('video');
     video.src = src
