@@ -28,8 +28,8 @@ function loadStartPage() {
 
 }
 
-/** Sida som välkomnar användaren med tidigare ifyllt namn, sidan
-låter användaren välja att börja lära sig mer om gorillan eller pandan */
+/** Sida som välkomnar användaren med tidigare ifyllt namn, 
+ * sidan låter användaren välja att börja lära sig mer om gorillan eller pandan */
 function loadGorillaOrPanda() { 
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
@@ -50,7 +50,8 @@ function loadGorillaOrPanda() {
 
 }
 
-/** Sida som låter användaren lär sig mer om gorillan */
+/** Sida som presenterar en quiz om gorillor, som innehåller tre påståenden, 
+ * där användaren får välja mellan Sant och Falskt */
 function loadGorilla() {
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
@@ -60,7 +61,7 @@ function loadGorilla() {
     changeVideo("./Videos/gorillaVideo.mp4");
 
     rubrikStart.textContent = "Gorillan";
-    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om gorillan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om gorillan kommer du nu att få göra en quiz. \nDu kommer att få tre påståenden där du väljer antingen \nSant eller Falskt";
     
     secondButton.classList.add("secondButton");
     startButton.textContent = "Starta quiz";
@@ -68,7 +69,7 @@ function loadGorilla() {
 
 }
 
-/** Sida som låter användaren göra en quiz, med tre frågor, om gorillor */
+/** Sida som presenterar det första påståendet, där användaren får välja mellan Sant och Falskt */
 function loadGorillaQ1() { 
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -89,7 +90,7 @@ function loadGorillaQ1() {
 
 }
 
-/**Sida som visar att användaren har svarat rätt på påstående 1. */
+/**Sida som visar att användaren har svarat rätt på det första påståendet. */
 function loadGorillaQ1Correct() {
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
@@ -107,7 +108,7 @@ function loadGorillaQ1Correct() {
     startButton.onclick = loadGorillaQ2;
 }
 
-/**Sida som visar att användaren har svarat fel på påstående 1. */
+/**Sida som visar att användaren har svarat fel på det första påståendet. */
 function loadGorillaQ1Wrong() {
     const textStartsida = document.getElementById("explainText");
     const startButton = document.getElementById("btn-1");
@@ -127,6 +128,7 @@ function loadGorillaQ1Wrong() {
 
 }
 
+/** Sida som presenterar det andra påståendet, användaren får välja mellan Sant och Falskt */
 function loadGorillaQ2() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -145,7 +147,7 @@ function loadGorillaQ2() {
     secondButton.onclick = loadGorillaQ2Wrong;
 }
 
-/**Sida som visar att användaren har svarat rätt på påstående 1. */
+/**Sida som visar att användaren har svarat rätt på det andra påståendet. */
 function loadGorillaQ2Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -162,7 +164,7 @@ function loadGorillaQ2Correct() {
     startButton.onclick = loadGorillaQ3;
 }
 
-/**Sida som visar att användaren har svarat fel på påstående 1. */
+/**Sida som visar att användaren har svarat fel på det andra påståendet. */
 function loadGorillaQ2Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -180,6 +182,7 @@ function loadGorillaQ2Wrong() {
 
 }
 
+/** Sida som presenterar det tredje påståendet, användaren får välja mellan Sant och Falskt */
 function loadGorillaQ3() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -198,7 +201,7 @@ function loadGorillaQ3() {
     secondButton.onclick = loadGorillaQ3Correct;
 }
 
-/**Sida som visar att användaren har svarat rätt på påstående 1. */
+/**Sida som visar att användaren har svarat rätt på det tredje påståendet. */
 function loadGorillaQ3Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -217,7 +220,7 @@ function loadGorillaQ3Correct() {
     secondButton.onclick = loadPandaQ1;
 }
 
-/**Sida som visar att användaren har svarat fel på påstående 1. */
+/**Sida som visar att användaren har svarat fel på det tredje påståendet. */
 function loadGorillaQ3Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -249,7 +252,7 @@ function loadPanda() {
     changeVideo("./Videos/pandaVideo.mp4");
     
     rubrikStart.textContent = "Pandan";
-    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få ett påstående där du väljer antingen \nSant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få tre påståenden där du väljer antingen \nSant eller Falskt";
 
     secondButton.classList.add("secondButton");
     startButton.textContent = "Starta quiz";
@@ -257,7 +260,7 @@ function loadPanda() {
     
 }
 
-/**Sida som låter användaren göra en quiz, med tre frågor, om pandor */
+/** Sida som presenterar det första påståendet, användaren får välja mellan Sant och Falskt */
 function loadPandaQ1() { 
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -278,7 +281,7 @@ function loadPandaQ1() {
 
 }
 
-/**Sida som visar att användaren har svarat rätt på påstående 1. */
+/**Sida som visar att användaren har svarat rätt på det första påståendet. */
 function loadPandaQ1Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -295,7 +298,7 @@ function loadPandaQ1Correct() {
     startButton.onclick = loadPandaQ2;
 }
 
-/**Sida som visar att användaren har svarat fel på påstående 1. */
+/**Sida som visar att användaren har svarat fel på det första påståendet. */
 function loadPandaQ1Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -313,7 +316,7 @@ function loadPandaQ1Wrong() {
 
 }
 
-/**Sida som visar påstående 2 för användaren. */
+/** Sida som presenterar det andra påståendet, användaren får välja mellan Sant och Falskt */
 function loadPandaQ2() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -332,7 +335,7 @@ function loadPandaQ2() {
     secondButton.onclick = loadPandaQ2Wrong;
 }
 
-/**Sida som visar att användaren har svarat rätt på påstående 2. */
+/**Sida som visar att användaren har svarat rätt på det andra påståendet. */
 function loadPandaQ2Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -349,7 +352,7 @@ function loadPandaQ2Correct() {
     startButton.onclick = loadPandaQ3;
 }
 
-/**Sida som visar att användaren har svarat fel på påstående 2. */
+/**Sida som visar att användaren har svarat fel på det andra påståendet. */
 function loadPandaQ2Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -368,7 +371,7 @@ function loadPandaQ2Wrong() {
 
 }
 
-/**Sida som visar påstående 3 för användaren. */
+/** Sida som presenterar det tredje påståendet, användaren får välja mellan Sant och Falskt */
 function loadPandaQ3() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -387,7 +390,7 @@ function loadPandaQ3() {
     secondButton.onclick = loadPandaQ3Correct;
 }
 
-/**Sida som visar att användaren har svarat rätt på påstående 2. */
+/**Sida som visar att användaren har svarat nästan rätt på det tredje påståendet. */
 function loadPandaQ3Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
