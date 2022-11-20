@@ -2,4 +2,4 @@
 
 En sida jag hoppas kunna utveckla framöver på min fritid för att sedan låta min systerdotter göra, så hon får lära sig om djuren och planetetn och vikten av de båda.
 
-Länk till min sida hittar du här "Länka till sidan"
+Länk till min sida hittar du här: https://github.com/JennyWeij/Planeten-Javascript-inlamningsuppgift2.git 
