@@ -1,5 +1,7 @@
-# Planeten
+# PlanetEn
 
-Spelaren kommer att få välja mellan att lära sig mer om gorillor eller pandor, genom att göra en quiz med tre påståenden. En sida jag hoppas kunna utveckla framöver på min fritid för att sedan låta min systerdotter göra, så hon får lära sig om djuren och planeten och vikten av de båda.
+Spelaren får välja mellan att lära sig mer om gorillor eller pandor, genom att göra en quiz med tre påståenden. Användaren väljer mellan sant eller falskt. 
+
+En sida jag hoppas kunna utveckla på min fritid framöver.
 
 Länk till min sida hittar du [här](https://github.com/JennyWeij/Planeten-Javascript-inlamningsuppgift2.git).
