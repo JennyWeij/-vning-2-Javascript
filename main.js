@@ -424,8 +424,3 @@ function loadPandaQ3Correct() {
     startButton.onclick = loadPandaQ1;
     secondButton.onclick = loadGorillaQ1;
 }
-
-
-
-
-
