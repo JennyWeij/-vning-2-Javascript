@@ -17,7 +17,7 @@ function loadStartPage() {
     const startButton = document.getElementById("btn-1");
 
     rubrikStart.textContent = "Välkommen till PlanetEn!";
-    textStartsida.textContent = "Här kommer du att få lära dig om två stycken spännande djur. \nFyll i ditt namn och klicka på knappen så kör vi igång!";
+    textStartsida.textContent = "Här kommer du att få lära dig om två spännande djur. \nFyll i ditt namn och klicka på knappen så kör vi igång!";
     
     startButton.textContent = "Nu kör vi!";
     startButton.onclick = loadGorillaOrPanda;
@@ -67,7 +67,7 @@ function loadGorilla() {
     changeVideo("./Videos/gorillaVideo.mp4");
 
     rubrikStart.textContent = "Gorillan";
-    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om gorillan kommer du nu att få göra en quiz. \nDu kommer att få tre påståenden där du väljer antingen \nSant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om gorillan kommer du att få göra en quiz. \nDu kommer att få tre påståenden där du väljer antingen \nSant eller Falskt";
     
     secondButton.classList.add("secondButton");
     startButton.textContent = "Starta quiz";
@@ -265,7 +265,7 @@ function loadPanda() {
     changeVideo("./Videos/pandaVideo.mp4");
     
     rubrikStart.textContent = "Pandan";
-    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om pandan kommer du nu att få göra en quiz. \nDu kommer att få tre påståenden där du väljer antingen \nSant eller Falskt";
+    textStartsida.textContent = "Okej " + userName + ", \nför att lära dig mer om pandan kommer du att få göra en quiz. \nDu kommer att få tre påståenden där du väljer antingen \nSant eller Falskt";
 
     secondButton.classList.add("secondButton");
     startButton.textContent = "Starta quiz";
