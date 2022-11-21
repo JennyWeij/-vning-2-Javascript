@@ -8,7 +8,8 @@ function main() {
 }
 
 /** Startsida som välkomnar användaren och berättar vad som kommer att hända, 
- * ber även användaren att fylla i sitt namn */
+ * ber användaren att fylla i sitt namn. Innehåller även en anonym funktion som sparar
+ * det ifyllda värdet från inputfältet */
 function loadStartPage() { 
     const rubrikStart = document.getElementById("rubrik");
     const myInputField = document.getElementById("userName");
@@ -29,7 +30,7 @@ function loadStartPage() {
 }
 
 /** Sida som välkomnar användaren med tidigare ifyllt namn, sidan låter användaren 
- * välja mellan att antingen börja lära sig mer om gorillan eller pandan */
+ * välja mellan att först börja lära sig om gorillan eller pandan */
 function loadGorillaOrPanda() { 
     const rubrikStart = document.getElementById("rubrik");
     const textStartsida = document.getElementById("explainText");
@@ -211,7 +212,7 @@ function loadGorillaQ3() {
 }
 
 /**Sida som visar att användaren har svarat rätt på det tredje och sista påståendet. 
- * Användaren får välja mellan att göra om gorillans quiz eller göra pandans quiz */
+ * Användaren får välja mellan att göra om gorillans quiz eller att göra pandans quiz */
 function loadGorillaQ3Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -231,7 +232,7 @@ function loadGorillaQ3Correct() {
 }
 
 /**Sida som visar att användaren har svarat fel på det tredje och sista påståendet. 
- * Användaren får välja mellan att göra om gorillans quiz eller göra pandans quiz */
+ * Användaren får välja mellan att göra om gorillans quiz eller att göra pandans quiz */
 function loadGorillaQ3Wrong() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
@@ -406,7 +407,7 @@ function loadPandaQ3() {
 }
 
 /**Sida som visar att användaren har svarat nästan rätt på det tredje och sista påståendet. 
- * Användaren får välja mellan att göra om gorillans quiz eller göra pandans quiz */
+ * Användaren får välja mellan att göra om pandans quiz eller att göra gorillans quiz */
 function loadPandaQ3Correct() {
     const startButton = document.getElementById("btn-1");
     const secondButton = document.getElementById("btn-2");
